@@ -1,0 +1,4 @@
+rule_id,severity,table_name,record_id,message,timestamp
+DQ-01,CRITICAL,companies,1.0,Duplicate Primary Key,2026-06-18 21:29:06.186320
+DQ-01,CRITICAL,companies,1.0,Duplicate Primary Key,2026-06-18 21:29:06.186320
+DQ-04,CRITICAL,companies,NULL,company_id is NULL,2026-06-18 21:29:06.186320
