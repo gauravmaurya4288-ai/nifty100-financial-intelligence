@@ -27,24 +27,26 @@ def cfo_quality_score(cfo, pat):
 
 def capex_intensity(investing_activity, sales):
     """
-    CapEx Intensity (%)
+    Returns:
+        (capex_percentage, label)
     """
 
-    if sales == 0:
-        return None
+    if sales is None or sales == 0:
+        return (None, None)
 
-    value = abs(investing_activity) / sales * 100
+    if investing_activity is None:
+        return (None, None)
 
-    if value < 3:
+    intensity = abs(investing_activity) / sales * 100
+
+    if intensity < 3:
         label = "Asset Light"
-
-    elif value <= 8:
+    elif intensity <= 8:
         label = "Moderate"
-
     else:
         label = "Capital Intensive"
 
-    return round(value, 2), label
+    return (round(intensity, 2), label)
 
 
 def fcf_conversion(fcf, operating_profit):
