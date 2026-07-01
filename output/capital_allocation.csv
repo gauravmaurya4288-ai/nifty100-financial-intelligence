@@ -1,0 +1,1188 @@
+company_id,year,cfo_sign,cfi_sign,cff_sign,pattern_label
+TCS,Mar-13,+,-,-,Reinvestor
+TCS,Mar-14,+,-,-,Reinvestor
+TCS,Mar-15,+,-,-,Shareholder Returns
+TCS,Mar-16,+,-,-,Shareholder Returns
+TCS,Mar-17,+,-,-,Reinvestor
+TCS,Mar-18,+,+,-,Liquidating Assets
+TCS,Mar-19,+,+,-,Liquidating Assets
+TCS,Mar-20,+,+,-,Liquidating Assets
+TCS,Mar-21,+,-,-,Reinvestor
+TCS,Mar-22,+,-,-,Shareholder Returns
+TCS,Mar-23,+,+,-,Liquidating Assets
+TCS,Mar-24,+,+,-,Liquidating Assets
+ABB,Dec-12,+,-,-,Shareholder Returns
+ABB,Mar-14,+,-,-,Reinvestor
+ABB,Mar-15,+,-,-,Reinvestor
+ABB,Mar-16,+,-,-,Shareholder Returns
+ABB,Mar-17,+,-,-,Shareholder Returns
+ABB,Mar-18,+,-,-,Reinvestor
+ABB,Mar-19,+,-,-,Shareholder Returns
+ABB,Mar-20,+,-,-,Shareholder Returns
+ABB,Mar-21,+,-,-,Shareholder Returns
+ABB,Mar-22,+,-,-,Reinvestor
+ABB,Mar-23,+,-,-,Shareholder Returns
+ABB,Mar-24,+,-,-,Shareholder Returns
+ABB,Mar-14,+,+,+,Cash Accumulator
+ABB,Mar-15,-,-,+,Growth Funded by Debt
+ABB,Mar-16,+,-,-,Shareholder Returns
+ABB,Mar-17,+,-,-,Shareholder Returns
+ABB,Mar-18,+,-,+,Mixed
+ABB,Mar-19,+,-,+,Mixed
+ABB,Mar-20,+,-,+,Mixed
+ABB,Mar-21,+,-,-,Reinvestor
+ABB,Mar-22,+,-,-,Reinvestor
+ABB,Mar-23,+,-,+,Mixed
+ABB,Mar-24,+,-,-,Shareholder Returns
+ADANIENSOL,Mar-14,+,+,+,Cash Accumulator
+ADANIENSOL,Mar-15,-,-,+,Growth Funded by Debt
+ADANIENSOL,Mar-16,+,-,-,Shareholder Returns
+ADANIENSOL,Mar-17,+,-,-,Shareholder Returns
+ADANIENSOL,Mar-18,+,-,+,Mixed
+ADANIENSOL,Mar-19,+,-,+,Mixed
+ADANIENSOL,Mar-20,+,-,+,Mixed
+ADANIENSOL,Mar-21,+,-,-,Reinvestor
+ADANIENSOL,Mar-22,+,-,-,Reinvestor
+ADANIENSOL,Mar-23,+,-,+,Mixed
+ADANIENSOL,Mar-24,+,-,-,Shareholder Returns
+ADANIENT,Mar-13,+,-,+,Mixed
+ADANIENT,Mar-14,+,-,-,Reinvestor
+ADANIENT,Mar-15,+,-,+,Mixed
+ADANIENT,Mar-16,+,-,-,Reinvestor
+ADANIENT,Mar-17,+,-,+,Mixed
+ADANIENT,Mar-18,+,-,+,Mixed
+ADANIENT,Mar-19,+,+,-,Liquidating Assets
+ADANIENT,Mar-20,+,-,-,Shareholder Returns
+ADANIENT,Mar-21,+,-,+,Mixed
+ADANIENT,Mar-22,+,-,+,Mixed
+ADANIENT,Mar-23,+,-,-,Shareholder Returns
+ADANIENT,Mar-24,+,-,+,Mixed
+ADANIGREEN,Mar-17,+,-,+,Mixed
+ADANIGREEN,Mar-18,+,-,+,Mixed
+ADANIGREEN,Mar-19,+,-,+,Mixed
+ADANIGREEN,Mar-20,+,-,+,Mixed
+ADANIGREEN,Mar-21,+,-,+,Mixed
+ADANIGREEN,Mar-22,+,-,+,Mixed
+ADANIGREEN,Mar-23,+,-,-,Shareholder Returns
+ADANIGREEN,Mar-24,+,-,+,Mixed
+ADANIPORTS,Mar-13,+,-,+,Mixed
+ADANIPORTS,Mar-14,+,-,+,Mixed
+ADANIPORTS,Mar-15,+,-,-,Shareholder Returns
+ADANIPORTS,Mar-16,+,-,+,Mixed
+ADANIPORTS,Mar-17,+,-,-,Shareholder Returns
+ADANIPORTS,Mar-18,+,-,-,Reinvestor
+ADANIPORTS,Mar-19,+,-,+,Mixed
+ADANIPORTS,Mar-20,+,-,-,Shareholder Returns
+ADANIPORTS,Mar-21,+,-,+,Mixed
+ADANIPORTS,Mar-22,+,-,-,Shareholder Returns
+ADANIPORTS,Mar-23,+,-,-,Reinvestor
+ADANIPORTS,Mar-24,+,-,-,Shareholder Returns
+ADANIPOWER,Mar-13,+,-,+,Mixed
+ADANIPOWER,Mar-14,+,-,+,Mixed
+ADANIPOWER,Mar-15,+,-,-,Reinvestor
+ADANIPOWER,Mar-16,+,-,-,Reinvestor
+ADANIPOWER,Mar-17,+,-,-,Reinvestor
+ADANIPOWER,Mar-18,+,-,-,Reinvestor
+ADANIPOWER,Mar-19,+,-,-,Reinvestor
+ADANIPOWER,Mar-20,+,-,-,Shareholder Returns
+ADANIPOWER,Mar-21,+,-,-,Reinvestor
+ADANIPOWER,Mar-22,+,+,-,Liquidating Assets
+ADANIPOWER,Mar-23,+,+,-,Liquidating Assets
+ADANIPOWER,Mar-24,+,+,-,Liquidating Assets
+AMBUJACEM,Dec-12,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-13,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-14,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-15,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-16,+,-,-,Reinvestor
+AMBUJACEM,Dec-17,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-18,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-19,+,-,-,Shareholder Returns
+AMBUJACEM,Dec-20,+,-,-,Reinvestor
+AMBUJACEM,Dec-21,+,-,-,Shareholder Returns
+AMBUJACEM,Mar-23,+,-,+,Mixed
+AMBUJACEM,Mar-24,+,-,+,Mixed
+APOLLOHOSP,Mar-13,+,-,+,Mixed
+APOLLOHOSP,Mar-14,+,-,-,Reinvestor
+APOLLOHOSP,Mar-15,+,-,+,Mixed
+APOLLOHOSP,Mar-16,+,-,+,Mixed
+APOLLOHOSP,Mar-17,+,-,+,Mixed
+APOLLOHOSP,Mar-18,+,-,-,Shareholder Returns
+APOLLOHOSP,Mar-19,+,-,-,Reinvestor
+APOLLOHOSP,Mar-20,+,-,-,Shareholder Returns
+APOLLOHOSP,Mar-21,+,-,-,Shareholder Returns
+APOLLOHOSP,Mar-22,+,-,-,Shareholder Returns
+APOLLOHOSP,Mar-23,+,-,-,Reinvestor
+APOLLOHOSP,Mar-24,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-13,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-14,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-15,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-16,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-17,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-18,+,-,-,Reinvestor
+ASIANPAINT,Mar-19,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-20,+,-,-,Reinvestor
+ASIANPAINT,Mar-21,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-22,+,-,-,Reinvestor
+ASIANPAINT,Mar-23,+,-,-,Shareholder Returns
+ASIANPAINT,Mar-24,+,-,-,Shareholder Returns
+AGTL,Mar-18,+,-,+,Mixed
+AGTL,Mar-19,+,+,-,Liquidating Assets
+AGTL,Mar-20,+,-,-,Reinvestor
+AGTL,Mar-21,+,-,+,Mixed
+AGTL,Mar-22,+,-,+,Mixed
+AGTL,Mar-23,+,-,+,Mixed
+AGTL,Mar-24,+,-,-,Shareholder Returns
+AXISBANK,Mar-13,+,-,+,Mixed
+AXISBANK,Mar-14,+,-,+,Mixed
+AXISBANK,Mar-15,-,-,+,Growth Funded by Debt
+AXISBANK,Mar-16,-,+,+,Distress Signal
+AXISBANK,Mar-17,+,-,-,Shareholder Returns
+AXISBANK,Mar-18,-,-,+,Growth Funded by Debt
+AXISBANK,Mar-19,+,-,+,Mixed
+AXISBANK,Mar-20,+,-,+,Mixed
+AXISBANK,Mar-21,+,-,+,Mixed
+AXISBANK,Mar-22,+,-,+,Mixed
+AXISBANK,Mar-23,+,-,+,Mixed
+AXISBANK,Mar-24,-,-,+,Growth Funded by Debt
+BAJAJ-AUTO,Mar-13,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-14,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-15,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-16,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-17,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-18,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-19,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-20,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-21,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-22,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-23,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-24,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-13,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-14,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-15,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-16,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-17,+,-,-,Reinvestor
+BAJAJ-AUTO,Mar-18,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-19,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-20,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-21,+,-,-,Shareholder Returns
+BAJAJ-AUTO,Mar-22,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-23,+,+,-,Liquidating Assets
+BAJAJ-AUTO,Mar-24,+,-,-,Shareholder Returns
+BAJAJFINSV,Mar-13,-,+,+,Distress Signal
+BAJAJFINSV,Mar-14,-,+,+,Distress Signal
+BAJAJFINSV,Mar-15,-,+,+,Distress Signal
+BAJAJFINSV,Mar-16,-,-,+,Growth Funded by Debt
+BAJAJFINSV,Mar-17,-,+,+,Distress Signal
+BAJAJFINSV,Mar-18,-,-,+,Growth Funded by Debt
+BAJAJFINSV,Mar-19,-,-,+,Growth Funded by Debt
+BAJAJFINSV,Mar-20,-,-,+,Growth Funded by Debt
+BAJAJFINSV,Mar-21,+,-,+,Mixed
+BAJAJFINSV,Mar-22,-,+,+,Distress Signal
+BAJAJFINSV,Mar-23,-,-,+,Growth Funded by Debt
+BAJAJFINSV,Mar-24,-,-,+,Growth Funded by Debt
+BAJAJHLDNG,Mar-13,+,-,-,Reinvestor
+BAJAJHLDNG,Mar-14,+,-,-,Shareholder Returns
+BAJAJHLDNG,Mar-15,+,-,-,Reinvestor
+BAJAJHLDNG,Mar-16,+,+,-,Liquidating Assets
+BAJAJHLDNG,Mar-17,-,-,-,Pre-Revenue
+BAJAJHLDNG,Mar-18,+,-,-,Shareholder Returns
+BAJAJHLDNG,Mar-19,+,-,-,Reinvestor
+BAJAJHLDNG,Mar-20,+,-,-,Shareholder Returns
+BAJAJHLDNG,Mar-21,+,-,-,Reinvestor
+BAJAJHLDNG,Mar-22,+,-,-,Reinvestor
+BAJAJHLDNG,Mar-23,+,-,-,Shareholder Returns
+BAJAJHLDNG,Mar-24,+,-,-,Shareholder Returns
+BAJFINANCE,Mar-15,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-16,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-17,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-18,-,+,+,Distress Signal
+BAJFINANCE,Mar-19,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-20,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-21,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-22,-,+,+,Distress Signal
+BAJFINANCE,Mar-23,-,-,+,Growth Funded by Debt
+BAJFINANCE,Mar-24,-,-,+,Growth Funded by Debt
+BANKBARODA,Mar-13,+,-,-,Shareholder Returns
+BANKBARODA,Mar-14,+,-,+,Mixed
+BANKBARODA,Mar-15,+,-,-,Shareholder Returns
+BANKBARODA,Mar-16,-,-,-,Pre-Revenue
+BANKBARODA,Mar-17,+,-,-,Shareholder Returns
+BANKBARODA,Mar-18,-,-,+,Growth Funded by Debt
+BANKBARODA,Mar-19,-,-,+,Growth Funded by Debt
+BANKBARODA,Mar-20,+,-,+,Mixed
+BANKBARODA,Mar-21,-,-,-,Pre-Revenue
+BANKBARODA,Mar-22,+,-,-,Shareholder Returns
+BANKBARODA,Mar-23,-,-,-,Pre-Revenue
+BANKBARODA,Mar-24,-,-,+,Growth Funded by Debt
+BEL,Mar-13,-,+,-,Unknown
+BEL,Mar-14,-,+,-,Unknown
+BEL,Mar-15,+,-,-,Shareholder Returns
+BEL,Mar-16,+,-,-,Shareholder Returns
+BEL,Mar-17,-,+,-,Unknown
+BEL,Mar-18,-,-,-,Pre-Revenue
+BEL,Mar-19,+,-,-,Reinvestor
+BEL,Mar-20,+,-,-,Shareholder Returns
+BEL,Mar-21,+,-,-,Shareholder Returns
+BEL,Mar-22,+,-,-,Reinvestor
+BEL,Mar-23,+,+,-,Liquidating Assets
+BEL,Mar-24,+,-,-,Reinvestor
+BHARTIARTL,Mar-13,+,-,-,Reinvestor
+BHARTIARTL,Mar-14,+,-,+,Mixed
+BHARTIARTL,Mar-15,+,-,-,Reinvestor
+BHARTIARTL,Mar-16,+,-,-,Shareholder Returns
+BHARTIARTL,Mar-17,+,-,-,Reinvestor
+BHARTIARTL,Mar-18,+,-,+,Mixed
+BHARTIARTL,Mar-19,+,-,+,Mixed
+BHARTIARTL,Mar-20,+,-,+,Mixed
+BHARTIARTL,Mar-21,+,-,-,Reinvestor
+BHARTIARTL,Mar-22,+,-,-,Reinvestor
+BHARTIARTL,Mar-23,+,-,-,Shareholder Returns
+BHARTIARTL,Mar-24,+,-,-,Shareholder Returns
+BHEL,Mar-13,+,-,+,Mixed
+BHEL,Mar-14,+,-,+,Mixed
+BHEL,Mar-15,+,+,-,Liquidating Assets
+BHEL,Mar-16,+,+,-,Liquidating Assets
+BHEL,Mar-17,+,-,-,Reinvestor
+BHEL,Mar-18,+,+,-,Liquidating Assets
+BHEL,Mar-19,-,+,-,Unknown
+BHEL,Mar-20,-,+,+,Distress Signal
+BHEL,Mar-21,+,-,-,Shareholder Returns
+BHEL,Mar-22,+,-,-,Reinvestor
+BHEL,Mar-23,-,+,+,Distress Signal
+BHEL,Mar-24,-,+,+,Distress Signal
+BOSCHLTD,Dec-12,+,-,-,Reinvestor
+BOSCHLTD,Dec-13,+,-,-,Reinvestor
+BOSCHLTD,Mar-15,+,-,-,Reinvestor
+BOSCHLTD,Mar-16,+,-,-,Reinvestor
+BOSCHLTD,Mar-17,+,+,-,Liquidating Assets
+BOSCHLTD,Mar-18,+,-,-,Shareholder Returns
+BOSCHLTD,Mar-19,+,+,-,Liquidating Assets
+BOSCHLTD,Mar-20,+,-,-,Shareholder Returns
+BOSCHLTD,Mar-21,+,-,-,Shareholder Returns
+BOSCHLTD,Mar-22,+,-,-,Reinvestor
+BOSCHLTD,Mar-23,+,+,-,Liquidating Assets
+BOSCHLTD,Mar-24,+,+,-,Liquidating Assets
+BPCL,Mar-13,+,-,-,Shareholder Returns
+BPCL,Mar-14,+,-,-,Reinvestor
+BPCL,Mar-15,+,-,-,Shareholder Returns
+BPCL,Mar-16,+,-,-,Shareholder Returns
+BPCL,Mar-17,+,-,+,Mixed
+BPCL,Mar-18,+,-,-,Reinvestor
+BPCL,Mar-19,+,-,+,Mixed
+BPCL,Mar-20,+,-,+,Mixed
+BPCL,Mar-21,+,-,-,Shareholder Returns
+BPCL,Mar-22,+,-,-,Reinvestor
+BPCL,Mar-23,+,-,-,Shareholder Returns
+BPCL,Mar-24,+,-,-,Reinvestor
+BRITANNIA,Mar-13,+,+,-,Liquidating Assets
+BRITANNIA,Mar-14,+,-,-,Shareholder Returns
+BRITANNIA,Mar-15,+,-,-,Reinvestor
+BRITANNIA,Mar-16,+,-,-,Shareholder Returns
+BRITANNIA,Mar-17,+,-,-,Reinvestor
+BRITANNIA,Mar-18,+,-,-,Shareholder Returns
+BRITANNIA,Mar-19,+,-,-,Reinvestor
+BRITANNIA,Mar-20,+,-,+,Mixed
+BRITANNIA,Mar-21,+,+,-,Liquidating Assets
+BRITANNIA,Mar-22,+,+,-,Liquidating Assets
+BRITANNIA,Mar-23,+,-,-,Reinvestor
+BRITANNIA,Mar-24,+,+,-,Liquidating Assets
+CANBK,Mar-13,+,-,-,Shareholder Returns
+CANBK,Mar-14,+,-,-,Shareholder Returns
+CANBK,Mar-15,+,-,-,Shareholder Returns
+CANBK,Mar-16,+,-,-,Shareholder Returns
+CANBK,Mar-17,+,-,+,Mixed
+CANBK,Mar-18,-,-,+,Growth Funded by Debt
+CANBK,Mar-19,+,-,-,Shareholder Returns
+CANBK,Mar-20,-,-,+,Growth Funded by Debt
+CANBK,Mar-21,+,-,+,Mixed
+CANBK,Mar-22,+,-,+,Mixed
+CANBK,Mar-23,-,-,+,Growth Funded by Debt
+CANBK,Mar-24,+,-,-,Shareholder Returns
+CHOLAFIN,Mar-13,-,+,+,Distress Signal
+CHOLAFIN,Mar-14,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-15,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-16,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-17,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-18,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-19,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-20,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-21,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-22,-,+,+,Distress Signal
+CHOLAFIN,Mar-23,-,-,+,Growth Funded by Debt
+CHOLAFIN,Mar-24,-,-,+,Growth Funded by Debt
+CIPLA,Mar-13,+,-,+,Mixed
+CIPLA,Mar-14,+,-,-,Shareholder Returns
+CIPLA,Mar-15,+,-,+,Mixed
+CIPLA,Mar-16,+,-,+,Mixed
+CIPLA,Mar-17,+,-,-,Reinvestor
+CIPLA,Mar-18,+,-,-,Shareholder Returns
+CIPLA,Mar-19,+,-,-,Reinvestor
+CIPLA,Mar-20,+,+,-,Liquidating Assets
+CIPLA,Mar-21,+,-,-,Shareholder Returns
+CIPLA,Mar-22,+,-,-,Reinvestor
+CIPLA,Mar-23,+,-,-,Reinvestor
+CIPLA,Mar-24,+,-,-,Reinvestor
+COALINDIA,Mar-13,+,-,-,Reinvestor
+COALINDIA,Mar-14,+,+,-,Liquidating Assets
+COALINDIA,Mar-15,+,+,-,Liquidating Assets
+COALINDIA,Mar-16,+,+,-,Liquidating Assets
+COALINDIA,Mar-17,+,+,-,Liquidating Assets
+COALINDIA,Mar-18,+,-,-,Reinvestor
+COALINDIA,Mar-19,+,-,-,Reinvestor
+COALINDIA,Mar-20,+,+,-,Liquidating Assets
+COALINDIA,Mar-21,+,+,-,Liquidating Assets
+COALINDIA,Mar-22,+,-,-,Shareholder Returns
+COALINDIA,Mar-23,+,-,-,Reinvestor
+COALINDIA,Mar-24,+,-,-,Reinvestor
+DABUR,Mar-13,+,-,-,Shareholder Returns
+DABUR,Mar-14,+,-,-,Shareholder Returns
+DABUR,Mar-15,+,-,-,Reinvestor
+DABUR,Mar-16,+,-,-,Shareholder Returns
+DABUR,Mar-17,+,-,-,Shareholder Returns
+DABUR,Mar-18,+,-,-,Reinvestor
+DABUR,Mar-19,+,+,-,Liquidating Assets
+DABUR,Mar-20,+,-,-,Shareholder Returns
+DABUR,Mar-21,+,-,-,Shareholder Returns
+DABUR,Mar-22,+,-,-,Shareholder Returns
+DABUR,Mar-23,+,-,-,Reinvestor
+DABUR,Mar-24,+,-,-,Reinvestor
+DIVISLAB,Mar-13,+,-,-,Reinvestor
+DIVISLAB,Mar-14,+,-,-,Shareholder Returns
+DIVISLAB,Mar-15,+,-,-,Shareholder Returns
+DIVISLAB,Mar-16,+,-,-,Reinvestor
+DIVISLAB,Mar-17,+,-,+,Mixed
+DIVISLAB,Mar-18,+,-,-,Reinvestor
+DIVISLAB,Mar-19,+,-,-,Shareholder Returns
+DIVISLAB,Mar-20,+,-,-,Shareholder Returns
+DIVISLAB,Mar-21,+,+,-,Liquidating Assets
+DIVISLAB,Mar-22,+,-,-,Reinvestor
+DIVISLAB,Mar-23,+,-,-,Reinvestor
+DIVISLAB,Mar-24,+,-,-,Shareholder Returns
+DLF,Mar-13,+,+,-,Liquidating Assets
+DLF,Mar-14,+,+,-,Liquidating Assets
+DLF,Mar-15,+,+,-,Liquidating Assets
+DLF,Mar-16,+,-,-,Shareholder Returns
+DLF,Mar-17,-,+,+,Distress Signal
+DLF,Mar-18,+,-,-,Reinvestor
+DLF,Mar-19,+,+,+,Cash Accumulator
+DLF,Mar-20,+,+,-,Liquidating Assets
+DLF,Mar-21,+,+,-,Liquidating Assets
+DLF,Mar-22,+,+,-,Liquidating Assets
+DLF,Mar-23,+,-,-,Reinvestor
+DLF,Mar-24,+,-,+,Mixed
+DMART,Mar-13,+,-,+,Mixed
+DMART,Mar-14,+,-,+,Mixed
+DMART,Mar-15,+,-,+,Mixed
+DMART,Mar-16,+,-,+,Mixed
+DMART,Mar-17,+,-,+,Mixed
+DMART,Mar-18,+,+,-,Liquidating Assets
+DMART,Mar-19,+,-,+,Mixed
+DMART,Mar-20,+,-,+,Mixed
+DMART,Mar-21,+,-,-,Shareholder Returns
+DMART,Mar-22,+,-,-,Reinvestor
+DMART,Mar-23,+,-,-,Shareholder Returns
+DMART,Mar-24,+,-,-,Shareholder Returns
+DRREDDY,Mar-13,+,-,-,Reinvestor
+DRREDDY,Mar-14,+,-,-,Shareholder Returns
+DRREDDY,Mar-15,+,-,-,Reinvestor
+DRREDDY,Mar-16,+,-,-,Reinvestor
+DRREDDY,Mar-17,+,-,-,Reinvestor
+DRREDDY,Mar-18,+,-,-,Reinvestor
+DRREDDY,Mar-19,+,-,-,Reinvestor
+DRREDDY,Mar-20,+,-,-,Reinvestor
+DRREDDY,Mar-21,+,-,-,Shareholder Returns
+DRREDDY,Mar-22,+,-,-,Shareholder Returns
+DRREDDY,Mar-23,+,-,-,Reinvestor
+DRREDDY,Mar-24,+,-,-,Shareholder Returns
+EICHERMOT,Dec-12,+,-,-,Reinvestor
+EICHERMOT,Dec-13,+,-,-,Reinvestor
+EICHERMOT,Dec-14,+,-,-,Reinvestor
+EICHERMOT,Mar-16,+,-,-,Reinvestor
+EICHERMOT,Mar-17,+,-,+,Mixed
+EICHERMOT,Mar-18,+,-,-,Shareholder Returns
+EICHERMOT,Mar-19,+,-,-,Shareholder Returns
+EICHERMOT,Mar-20,+,-,-,Reinvestor
+EICHERMOT,Mar-21,+,-,-,Shareholder Returns
+EICHERMOT,Mar-22,+,-,-,Reinvestor
+EICHERMOT,Mar-23,+,-,-,Shareholder Returns
+EICHERMOT,Mar-24,+,-,-,Shareholder Returns
+GAIL,Mar-13,+,-,+,Mixed
+GAIL,Mar-14,+,-,-,Shareholder Returns
+GAIL,Mar-15,+,-,-,Reinvestor
+GAIL,Mar-16,+,-,-,Shareholder Returns
+GAIL,Mar-17,+,-,-,Shareholder Returns
+GAIL,Mar-18,+,-,-,Shareholder Returns
+GAIL,Mar-19,+,-,-,Reinvestor
+GAIL,Mar-20,+,-,+,Mixed
+GAIL,Mar-21,+,-,-,Shareholder Returns
+GAIL,Mar-22,+,-,-,Shareholder Returns
+GAIL,Mar-23,+,-,+,Mixed
+GAIL,Mar-24,+,-,-,Shareholder Returns
+GODREJCP,Mar-13,+,-,+,Mixed
+GODREJCP,Mar-14,+,-,-,Shareholder Returns
+GODREJCP,Mar-15,+,-,-,Reinvestor
+GODREJCP,Mar-16,+,-,-,Shareholder Returns
+GODREJCP,Mar-17,+,-,+,Mixed
+GODREJCP,Mar-18,+,-,-,Shareholder Returns
+GODREJCP,Mar-19,+,+,-,Liquidating Assets
+GODREJCP,Mar-20,+,-,-,Reinvestor
+GODREJCP,Mar-21,+,-,-,Reinvestor
+GODREJCP,Mar-22,+,-,-,Shareholder Returns
+GODREJCP,Mar-23,+,-,-,Reinvestor
+GODREJCP,Mar-24,+,-,+,Mixed
+GRASIM,Mar-13,+,-,+,Mixed
+GRASIM,Mar-14,+,-,-,Shareholder Returns
+GRASIM,Mar-15,+,-,-,Reinvestor
+GRASIM,Mar-16,+,-,-,Reinvestor
+GRASIM,Mar-17,+,-,-,Reinvestor
+GRASIM,Mar-18,-,+,+,Distress Signal
+GRASIM,Mar-19,-,-,+,Growth Funded by Debt
+GRASIM,Mar-20,+,-,-,Shareholder Returns
+GRASIM,Mar-21,+,-,-,Reinvestor
+GRASIM,Mar-22,+,-,-,Reinvestor
+GRASIM,Mar-23,-,-,+,Growth Funded by Debt
+GRASIM,Mar-24,-,-,+,Growth Funded by Debt
+HAL,Mar-17,-,+,-,Unknown
+HAL,Mar-18,-,+,-,Unknown
+HAL,Mar-19,-,+,+,Distress Signal
+HAL,Mar-20,+,-,+,Mixed
+HAL,Mar-21,+,-,-,Shareholder Returns
+HAL,Mar-22,+,-,-,Reinvestor
+HAL,Mar-23,+,-,-,Shareholder Returns
+HAL,Mar-24,+,-,-,Reinvestor
+HAVELLS,Mar-13,+,-,-,Shareholder Returns
+HAVELLS,Mar-14,+,-,-,Shareholder Returns
+HAVELLS,Mar-15,+,-,-,Reinvestor
+HAVELLS,Mar-16,+,-,-,Reinvestor
+HAVELLS,Mar-17,+,-,-,Shareholder Returns
+HAVELLS,Mar-18,+,-,-,Reinvestor
+HAVELLS,Mar-19,+,+,-,Liquidating Assets
+HAVELLS,Mar-20,+,-,-,Reinvestor
+HAVELLS,Mar-21,+,-,+,Mixed
+HAVELLS,Mar-22,+,-,-,Shareholder Returns
+HAVELLS,Mar-23,+,+,-,Liquidating Assets
+HAVELLS,Mar-24,+,-,-,Reinvestor
+HCLTECH,Jun-13,+,-,-,Shareholder Returns
+HCLTECH,Jun-14,+,-,-,Shareholder Returns
+HCLTECH,Jun-15,+,-,-,Shareholder Returns
+HCLTECH,Mar-16,+,-,-,Reinvestor
+HCLTECH,Mar-17,+,-,-,Shareholder Returns
+HCLTECH,Mar-18,+,-,-,Shareholder Returns
+HCLTECH,Mar-19,+,-,-,Shareholder Returns
+HCLTECH,Mar-20,+,-,-,Reinvestor
+HCLTECH,Mar-21,+,-,-,Shareholder Returns
+HCLTECH,Mar-22,+,+,-,Liquidating Assets
+HCLTECH,Mar-23,+,-,-,Reinvestor
+HCLTECH,Mar-24,+,-,-,Shareholder Returns
+HDFCBANK,Mar-13,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-14,+,-,+,Mixed
+HDFCBANK,Mar-15,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-16,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-17,+,-,-,Shareholder Returns
+HDFCBANK,Mar-18,+,-,+,Mixed
+HDFCBANK,Mar-19,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-20,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-21,+,-,-,Shareholder Returns
+HDFCBANK,Mar-22,-,-,+,Growth Funded by Debt
+HDFCBANK,Mar-23,+,-,+,Mixed
+HDFCBANK,Mar-24,+,+,-,Liquidating Assets
+HDFCLIFE,Mar-13,-,-,-,Pre-Revenue
+HDFCLIFE,Mar-14,-,-,-,Pre-Revenue
+HDFCLIFE,Mar-15,+,-,-,Shareholder Returns
+HDFCLIFE,Mar-16,+,-,-,Shareholder Returns
+HDFCLIFE,Mar-17,+,-,-,Shareholder Returns
+HDFCLIFE,Mar-18,+,-,-,Shareholder Returns
+HDFCLIFE,Mar-19,+,-,-,Reinvestor
+HDFCLIFE,Mar-20,+,-,+,Mixed
+HDFCLIFE,Mar-21,+,-,+,Mixed
+HDFCLIFE,Mar-22,+,-,-,Shareholder Returns
+HDFCLIFE,Mar-23,+,-,+,Mixed
+HDFCLIFE,Mar-24,+,-,-,Reinvestor
+HEROMOTOCO,Mar-14,+,-,-,Reinvestor
+HEROMOTOCO,Mar-15,+,+,-,Liquidating Assets
+HEROMOTOCO,Mar-16,+,-,-,Reinvestor
+HEROMOTOCO,Mar-17,+,-,-,Reinvestor
+HEROMOTOCO,Mar-18,+,-,-,Shareholder Returns
+HEROMOTOCO,Mar-19,+,+,-,Liquidating Assets
+HEROMOTOCO,Mar-20,+,-,-,Shareholder Returns
+HEROMOTOCO,Mar-21,+,-,-,Reinvestor
+HEROMOTOCO,Mar-22,+,-,-,Reinvestor
+HEROMOTOCO,Mar-23,+,-,-,Shareholder Returns
+HEROMOTOCO,Mar-24,+,-,-,Shareholder Returns
+HINDALCO,Mar-13,+,-,+,Mixed
+HINDALCO,Mar-14,+,-,+,Mixed
+HINDALCO,Mar-15,+,-,-,Shareholder Returns
+HINDALCO,Mar-16,+,-,-,Reinvestor
+HINDALCO,Mar-17,+,-,-,Shareholder Returns
+HINDALCO,Mar-18,+,+,-,Liquidating Assets
+HINDALCO,Mar-19,+,-,-,Shareholder Returns
+HINDALCO,Mar-20,+,-,+,Mixed
+HINDALCO,Mar-21,+,-,-,Reinvestor
+HINDALCO,Mar-22,+,-,-,Shareholder Returns
+HINDALCO,Mar-23,+,-,-,Shareholder Returns
+HINDALCO,Mar-24,+,-,-,Reinvestor
+HINDUNILVR,Mar-13,+,+,-,Liquidating Assets
+HINDUNILVR,Mar-14,+,-,-,Shareholder Returns
+HINDUNILVR,Mar-15,+,+,-,Liquidating Assets
+HINDUNILVR,Mar-16,+,-,-,Shareholder Returns
+HINDUNILVR,Mar-17,+,-,-,Reinvestor
+HINDUNILVR,Mar-18,+,-,-,Shareholder Returns
+HINDUNILVR,Mar-19,+,-,-,Reinvestor
+HINDUNILVR,Mar-20,+,+,-,Liquidating Assets
+HINDUNILVR,Mar-21,+,-,-,Reinvestor
+HINDUNILVR,Mar-22,+,-,-,Reinvestor
+HINDUNILVR,Mar-23,+,-,-,Reinvestor
+HINDUNILVR,Mar-24,+,-,-,Shareholder Returns
+ICICIBANK,Mar-13,+,-,+,Mixed
+ICICIBANK,Mar-14,+,-,+,Mixed
+ICICIBANK,Mar-15,-,-,+,Growth Funded by Debt
+ICICIBANK,Mar-16,+,-,+,Mixed
+ICICIBANK,Mar-17,+,-,-,Shareholder Returns
+ICICIBANK,Mar-18,+,-,+,Mixed
+ICICIBANK,Mar-19,+,-,-,Reinvestor
+ICICIBANK,Mar-20,+,-,+,Mixed
+ICICIBANK,Mar-21,+,-,-,Shareholder Returns
+ICICIBANK,Mar-22,+,-,+,Mixed
+ICICIBANK,Mar-23,-,-,+,Growth Funded by Debt
+ICICIBANK,Mar-24,+,-,+,Mixed
+ICICIGI,Mar-13,+,-,+,Mixed
+ICICIGI,Mar-14,+,-,+,Mixed
+ICICIGI,Mar-15,-,+,-,Unknown
+ICICIGI,Mar-16,+,-,-,Shareholder Returns
+ICICIGI,Mar-17,+,-,+,Mixed
+ICICIGI,Mar-18,+,-,-,Shareholder Returns
+ICICIGI,Mar-19,+,-,-,Reinvestor
+ICICIGI,Mar-20,+,-,-,Reinvestor
+ICICIGI,Mar-21,+,-,-,Shareholder Returns
+ICICIGI,Mar-22,+,+,-,Liquidating Assets
+ICICIGI,Mar-23,+,-,-,Reinvestor
+ICICIGI,Mar-24,+,-,-,Shareholder Returns
+ICICIPRULI,Mar-13,-,+,-,Unknown
+ICICIPRULI,Mar-14,-,+,-,Unknown
+ICICIPRULI,Mar-15,+,-,-,Reinvestor
+ICICIPRULI,Mar-16,+,+,-,Liquidating Assets
+ICICIPRULI,Mar-17,+,-,-,Shareholder Returns
+ICICIPRULI,Mar-18,+,-,-,Reinvestor
+ICICIPRULI,Mar-19,+,-,-,Shareholder Returns
+ICICIPRULI,Mar-20,+,-,-,Reinvestor
+ICICIPRULI,Mar-21,+,-,+,Mixed
+ICICIPRULI,Mar-22,+,-,-,Shareholder Returns
+ICICIPRULI,Mar-23,+,-,-,Reinvestor
+ICICIPRULI,Mar-24,-,+,-,Unknown
+INDIGO,Mar-13,+,-,+,Mixed
+INDIGO,Mar-14,+,-,+,Mixed
+INDIGO,Mar-15,+,-,-,Shareholder Returns
+INDIGO,Mar-16,+,-,-,Shareholder Returns
+INDIGO,Mar-17,+,-,-,Reinvestor
+INDIGO,Mar-18,+,-,+,Mixed
+INDIGO,Mar-19,+,-,-,Shareholder Returns
+INDIGO,Mar-20,+,-,-,Reinvestor
+INDIGO,Mar-21,-,+,-,Unknown
+INDIGO,Mar-22,+,+,-,Liquidating Assets
+INDIGO,Mar-23,+,-,-,Shareholder Returns
+INDIGO,Mar-24,+,-,-,Reinvestor
+INDUSINDBK,Mar-13,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-14,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-15,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-16,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-17,+,-,-,Shareholder Returns
+INDUSINDBK,Mar-18,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-19,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-20,-,+,+,Distress Signal
+INDUSINDBK,Mar-21,+,-,-,Shareholder Returns
+INDUSINDBK,Mar-22,+,-,-,Shareholder Returns
+INDUSINDBK,Mar-23,-,-,+,Growth Funded by Debt
+INDUSINDBK,Mar-24,-,-,-,Pre-Revenue
+INFY,Mar-13,+,-,-,Shareholder Returns
+INFY,Mar-14,+,-,-,Shareholder Returns
+INFY,Mar-15,+,+,-,Liquidating Assets
+INFY,Mar-16,+,-,-,Shareholder Returns
+INFY,Mar-17,+,-,-,Reinvestor
+INFY,Mar-18,+,+,-,Liquidating Assets
+INFY,Mar-19,+,-,-,Reinvestor
+INFY,Mar-20,+,-,-,Reinvestor
+INFY,Mar-21,+,-,-,Shareholder Returns
+INFY,Mar-22,+,-,-,Reinvestor
+INFY,Mar-23,+,-,-,Reinvestor
+INFY,Mar-24,+,-,-,Shareholder Returns
+IOC,Mar-13,+,-,+,Mixed
+IOC,Mar-14,+,-,-,Shareholder Returns
+IOC,Mar-15,+,-,-,Reinvestor
+IOC,Mar-16,+,-,-,Shareholder Returns
+IOC,Mar-17,+,-,-,Reinvestor
+IOC,Mar-18,+,-,-,Reinvestor
+IOC,Mar-19,+,-,+,Mixed
+IOC,Mar-20,+,-,+,Mixed
+IOC,Mar-21,+,-,-,Reinvestor
+IOC,Mar-22,+,-,-,Shareholder Returns
+IOC,Mar-23,+,-,-,Reinvestor
+IOC,Mar-24,+,-,-,Shareholder Returns
+IRCTC,Mar-15,+,-,-,Shareholder Returns
+IRCTC,Mar-16,+,+,-,Liquidating Assets
+IRCTC,Mar-17,+,+,-,Liquidating Assets
+IRCTC,Mar-18,+,+,-,Liquidating Assets
+IRCTC,Mar-19,+,-,-,Reinvestor
+IRCTC,Mar-20,+,+,-,Liquidating Assets
+IRCTC,Mar-21,+,-,-,Reinvestor
+IRCTC,Mar-22,+,-,-,Shareholder Returns
+IRCTC,Mar-23,+,-,-,Shareholder Returns
+IRCTC,Mar-24,+,-,-,Shareholder Returns
+IRFC,Mar-16,-,+,+,Distress Signal
+IRFC,Mar-17,-,+,+,Distress Signal
+IRFC,Mar-18,-,+,+,Distress Signal
+IRFC,Mar-19,-,+,+,Distress Signal
+IRFC,Mar-20,-,+,+,Distress Signal
+IRFC,Mar-21,-,+,+,Distress Signal
+IRFC,Mar-22,-,-,+,Growth Funded by Debt
+IRFC,Mar-23,-,+,+,Distress Signal
+IRFC,Mar-24,+,-,-,Reinvestor
+ITC,Mar-13,+,-,-,Reinvestor
+ITC,Mar-14,+,-,-,Reinvestor
+ITC,Mar-15,+,-,-,Reinvestor
+ITC,Mar-16,+,-,-,Shareholder Returns
+ITC,Mar-17,+,-,-,Shareholder Returns
+ITC,Mar-18,+,-,-,Reinvestor
+ITC,Mar-19,+,-,-,Shareholder Returns
+ITC,Mar-20,+,-,-,Shareholder Returns
+ITC,Mar-21,+,+,-,Liquidating Assets
+ITC,Mar-22,+,-,-,Reinvestor
+ITC,Mar-23,+,-,-,Shareholder Returns
+ITC,Mar-24,+,+,-,Liquidating Assets
+JINDALSTEL,Mar-13,+,-,+,Mixed
+JINDALSTEL,Mar-14,+,-,+,Mixed
+JINDALSTEL,Mar-15,+,-,+,Mixed
+JINDALSTEL,Mar-16,+,-,-,Reinvestor
+JINDALSTEL,Mar-17,+,-,-,Reinvestor
+JINDALSTEL,Mar-18,+,-,-,Shareholder Returns
+JINDALSTEL,Mar-19,+,-,-,Reinvestor
+JINDALSTEL,Mar-20,+,-,-,Shareholder Returns
+JINDALSTEL,Mar-21,+,-,-,Shareholder Returns
+JINDALSTEL,Mar-22,+,-,-,Reinvestor
+JINDALSTEL,Mar-23,+,-,-,Shareholder Returns
+JINDALSTEL,Mar-24,+,-,+,Mixed
+JIOFIN,Mar-23,+,-,-,Shareholder Returns
+JIOFIN,Mar-24,-,+,-,Unknown
+JSWENERGY,Mar-13,+,-,-,Shareholder Returns
+JSWENERGY,Mar-14,+,-,-,Shareholder Returns
+JSWENERGY,Mar-15,+,-,-,Shareholder Returns
+JSWENERGY,Mar-16,+,-,-,Reinvestor
+JSWENERGY,Mar-17,+,-,-,Shareholder Returns
+JSWENERGY,Mar-18,+,-,-,Reinvestor
+JSWENERGY,Mar-19,+,-,-,Reinvestor
+JSWENERGY,Mar-20,+,+,-,Liquidating Assets
+JSWENERGY,Mar-21,+,-,-,Shareholder Returns
+JSWENERGY,Mar-22,+,-,-,Shareholder Returns
+JSWENERGY,Mar-23,+,-,+,Mixed
+JSWENERGY,Mar-24,+,-,+,Mixed
+JSWSTEEL,Mar-13,+,-,-,Reinvestor
+JSWSTEEL,Mar-14,+,-,+,Mixed
+JSWSTEEL,Mar-15,+,-,-,Shareholder Returns
+JSWSTEEL,Mar-16,+,-,-,Reinvestor
+JSWSTEEL,Mar-17,+,-,-,Shareholder Returns
+JSWSTEEL,Mar-18,+,-,-,Reinvestor
+JSWSTEEL,Mar-19,+,-,+,Mixed
+JSWSTEEL,Mar-20,+,-,+,Mixed
+JSWSTEEL,Mar-21,+,-,-,Shareholder Returns
+JSWSTEEL,Mar-22,+,-,-,Reinvestor
+JSWSTEEL,Mar-23,+,-,-,Shareholder Returns
+JSWSTEEL,Mar-24,+,-,-,Reinvestor
+KOTAKBANK,Mar-13,+,-,+,Mixed
+KOTAKBANK,Mar-14,+,-,-,Shareholder Returns
+KOTAKBANK,Mar-15,+,-,+,Mixed
+KOTAKBANK,Mar-16,+,-,+,Mixed
+KOTAKBANK,Mar-17,+,-,+,Mixed
+KOTAKBANK,Mar-18,-,-,+,Growth Funded by Debt
+KOTAKBANK,Mar-19,+,-,+,Mixed
+KOTAKBANK,Mar-20,+,-,-,Shareholder Returns
+KOTAKBANK,Mar-21,+,-,-,Reinvestor
+KOTAKBANK,Mar-22,+,-,+,Mixed
+KOTAKBANK,Mar-23,-,-,+,Growth Funded by Debt
+KOTAKBANK,Mar-24,+,-,+,Mixed
+LICI,Mar-19,+,+,-,Liquidating Assets
+LICI,Mar-20,+,-,-,Reinvestor
+LICI,Mar-21,+,+,-,Liquidating Assets
+LICI,Mar-22,-,+,+,Distress Signal
+LICI,Mar-23,+,-,-,Shareholder Returns
+LICI,Mar-24,+,-,-,Reinvestor
+LODHA,Mar-16,+,-,+,Mixed
+LODHA,Mar-17,+,-,-,Reinvestor
+LODHA,Mar-18,+,-,+,Mixed
+LODHA,Mar-19,-,-,+,Growth Funded by Debt
+LODHA,Mar-20,+,+,-,Liquidating Assets
+LODHA,Mar-21,+,+,-,Liquidating Assets
+LODHA,Mar-22,+,+,-,Liquidating Assets
+LODHA,Mar-23,+,+,-,Liquidating Assets
+LODHA,Mar-24,+,-,+,Mixed
+LT,Mar-13,-,-,+,Growth Funded by Debt
+LT,Mar-14,-,-,+,Growth Funded by Debt
+LT,Mar-15,-,-,+,Growth Funded by Debt
+LT,Mar-16,-,-,+,Growth Funded by Debt
+LT,Mar-17,+,-,+,Mixed
+LT,Mar-18,-,+,+,Distress Signal
+LT,Mar-19,-,-,+,Growth Funded by Debt
+LT,Mar-20,+,-,+,Mixed
+LT,Mar-21,+,-,-,Shareholder Returns
+LT,Mar-22,+,-,-,Shareholder Returns
+LT,Mar-23,+,-,-,Shareholder Returns
+LT,Mar-24,+,+,-,Liquidating Assets
+LTIM,Mar-13,+,-,-,Reinvestor
+LTIM,Mar-14,+,+,-,Liquidating Assets
+LTIM,Mar-15,+,-,-,Shareholder Returns
+LTIM,Mar-16,+,-,-,Shareholder Returns
+LTIM,Mar-17,+,-,-,Shareholder Returns
+LTIM,Mar-18,+,-,-,Reinvestor
+LTIM,Mar-19,+,-,-,Shareholder Returns
+LTIM,Mar-20,+,-,-,Shareholder Returns
+LTIM,Mar-21,+,-,-,Shareholder Returns
+LTIM,Mar-22,+,-,-,Reinvestor
+LTIM,Mar-23,+,-,-,Shareholder Returns
+LTIM,Mar-24,+,-,-,Reinvestor
+M&M,Mar-13,-,-,+,Growth Funded by Debt
+M&M,Mar-14,-,-,+,Growth Funded by Debt
+M&M,Mar-15,+,-,+,Mixed
+M&M,Mar-16,+,-,+,Mixed
+M&M,Mar-17,+,-,+,Mixed
+M&M,Mar-18,+,-,+,Mixed
+M&M,Mar-19,-,-,+,Growth Funded by Debt
+M&M,Mar-20,-,-,+,Growth Funded by Debt
+M&M,Mar-21,+,-,+,Mixed
+M&M,Mar-22,+,-,-,Shareholder Returns
+M&M,Mar-23,-,-,+,Growth Funded by Debt
+M&M,Mar-24,-,-,+,Growth Funded by Debt
+MARUTI,Mar-13,+,-,-,Reinvestor
+MARUTI,Mar-14,+,-,-,Reinvestor
+MARUTI,Mar-15,+,-,-,Reinvestor
+MARUTI,Mar-16,+,-,-,Shareholder Returns
+MARUTI,Mar-17,+,-,-,Reinvestor
+MARUTI,Mar-18,+,-,-,Shareholder Returns
+MARUTI,Mar-19,+,-,-,Shareholder Returns
+MARUTI,Mar-20,+,-,-,Reinvestor
+MARUTI,Mar-21,+,-,-,Shareholder Returns
+MARUTI,Mar-22,+,-,-,Reinvestor
+MARUTI,Mar-23,+,-,-,Shareholder Returns
+MARUTI,Mar-24,+,-,-,Shareholder Returns
+MOTHERSON,Mar-13,+,-,-,Shareholder Returns
+MOTHERSON,Mar-14,+,-,-,Shareholder Returns
+MOTHERSON,Mar-15,+,-,+,Mixed
+MOTHERSON,Mar-16,+,-,-,Shareholder Returns
+MOTHERSON,Mar-17,+,-,+,Mixed
+MOTHERSON,Mar-18,+,-,-,Reinvestor
+MOTHERSON,Mar-19,+,-,-,Shareholder Returns
+MOTHERSON,Mar-20,+,-,-,Shareholder Returns
+MOTHERSON,Mar-21,+,-,-,Shareholder Returns
+MOTHERSON,Mar-22,+,-,-,Reinvestor
+MOTHERSON,Mar-23,+,-,-,Reinvestor
+MOTHERSON,Mar-24,+,-,+,Mixed
+NAUKRI,Mar-13,+,-,-,Shareholder Returns
+NAUKRI,Mar-14,+,-,+,Mixed
+NAUKRI,Mar-15,+,-,+,Mixed
+NAUKRI,Mar-16,+,-,-,Shareholder Returns
+NAUKRI,Mar-17,+,-,-,Shareholder Returns
+NAUKRI,Mar-18,+,-,-,Shareholder Returns
+NAUKRI,Mar-19,+,-,-,Shareholder Returns
+NAUKRI,Mar-20,+,+,-,Liquidating Assets
+NAUKRI,Mar-21,+,-,+,Mixed
+NAUKRI,Mar-22,+,-,+,Mixed
+NAUKRI,Mar-23,+,-,+,Mixed
+NAUKRI,Mar-24,+,-,+,Mixed
+NESTLEIND,Dec-13,+,-,-,Shareholder Returns
+NESTLEIND,Dec-14,+,-,-,Reinvestor
+NESTLEIND,Dec-15,+,-,-,Shareholder Returns
+NESTLEIND,Dec-16,+,-,-,Shareholder Returns
+NESTLEIND,Dec-17,+,-,-,Shareholder Returns
+NESTLEIND,Dec-18,+,-,-,Shareholder Returns
+NESTLEIND,Dec-19,+,+,-,Liquidating Assets
+NESTLEIND,Dec-20,+,-,-,Shareholder Returns
+NESTLEIND,Dec-21,+,-,-,Reinvestor
+NESTLEIND,Dec-22,+,-,-,Shareholder Returns
+NESTLEIND,Dec-23,+,-,-,Shareholder Returns
+NESTLEIND,Mar-24,+,-,-,Reinvestor
+NHPC,Mar-13,+,-,-,Shareholder Returns
+NHPC,Mar-14,+,-,-,Reinvestor
+NHPC,Mar-15,+,-,-,Shareholder Returns
+NHPC,Mar-16,+,-,-,Shareholder Returns
+NHPC,Mar-17,+,-,-,Reinvestor
+NHPC,Mar-18,+,-,-,Reinvestor
+NHPC,Mar-19,+,-,-,Shareholder Returns
+NHPC,Mar-20,+,-,+,Mixed
+NHPC,Mar-21,+,-,-,Shareholder Returns
+NHPC,Mar-22,+,-,-,Shareholder Returns
+NHPC,Mar-23,+,-,-,Reinvestor
+NHPC,Mar-24,+,-,-,Shareholder Returns
+NTPC,Mar-13,+,-,+,Mixed
+NTPC,Mar-14,+,-,-,Reinvestor
+NTPC,Mar-15,+,-,-,Reinvestor
+NTPC,Mar-16,+,-,-,Shareholder Returns
+NTPC,Mar-17,+,-,+,Mixed
+NTPC,Mar-18,+,-,+,Mixed
+NTPC,Mar-19,+,-,+,Mixed
+NTPC,Mar-20,+,-,+,Mixed
+NTPC,Mar-21,+,-,-,Shareholder Returns
+NTPC,Mar-22,+,-,-,Reinvestor
+NTPC,Mar-23,+,-,-,Reinvestor
+NTPC,Mar-24,+,-,-,Shareholder Returns
+ONGC,Mar-13,+,-,-,Reinvestor
+ONGC,Mar-14,+,-,+,Mixed
+ONGC,Mar-15,+,-,-,Reinvestor
+ONGC,Mar-16,+,-,-,Reinvestor
+ONGC,Mar-17,+,-,-,Shareholder Returns
+ONGC,Mar-18,+,-,+,Mixed
+ONGC,Mar-19,+,-,-,Shareholder Returns
+ONGC,Mar-20,+,-,-,Shareholder Returns
+ONGC,Mar-21,+,-,-,Reinvestor
+ONGC,Mar-22,+,-,-,Shareholder Returns
+ONGC,Mar-23,+,-,-,Reinvestor
+ONGC,Mar-24,+,-,-,Reinvestor
+PFC,Mar-13,-,+,+,Distress Signal
+PFC,Mar-14,-,+,+,Distress Signal
+PFC,Mar-15,-,-,+,Growth Funded by Debt
+PFC,Mar-16,-,-,+,Growth Funded by Debt
+PFC,Mar-17,+,-,+,Mixed
+PFC,Mar-18,-,+,+,Distress Signal
+PFC,Mar-19,-,-,+,Growth Funded by Debt
+PFC,Mar-20,-,-,+,Growth Funded by Debt
+PFC,Mar-21,-,+,+,Distress Signal
+PFC,Mar-22,+,-,-,Reinvestor
+PFC,Mar-23,-,-,+,Growth Funded by Debt
+PFC,Mar-24,-,-,+,Growth Funded by Debt
+PIDILITIND,Mar-13,+,-,-,Reinvestor
+PIDILITIND,Mar-14,+,-,-,Shareholder Returns
+PIDILITIND,Mar-15,+,-,-,Reinvestor
+PIDILITIND,Mar-16,+,-,-,Shareholder Returns
+PIDILITIND,Mar-17,+,-,+,Mixed
+PIDILITIND,Mar-18,+,+,-,Liquidating Assets
+PIDILITIND,Mar-19,+,-,-,Reinvestor
+PIDILITIND,Mar-20,+,+,-,Liquidating Assets
+PIDILITIND,Mar-21,+,-,-,Reinvestor
+PIDILITIND,Mar-22,+,-,-,Reinvestor
+PIDILITIND,Mar-23,+,-,-,Shareholder Returns
+PIDILITIND,Mar-24,+,-,-,Shareholder Returns
+PNB,Mar-13,-,-,-,Pre-Revenue
+PNB,Mar-14,+,-,+,Mixed
+PNB,Mar-15,+,-,+,Mixed
+PNB,Mar-16,+,-,+,Mixed
+PNB,Mar-17,+,+,-,Liquidating Assets
+PNB,Mar-18,-,+,+,Distress Signal
+PNB,Mar-19,-,-,+,Growth Funded by Debt
+PNB,Mar-20,-,-,+,Growth Funded by Debt
+PNB,Mar-21,+,-,+,Mixed
+PNB,Mar-22,+,-,+,Mixed
+PNB,Mar-23,+,-,+,Mixed
+PNB,Mar-24,-,-,+,Growth Funded by Debt
+POWERGRID,Mar-13,+,-,+,Mixed
+POWERGRID,Mar-14,+,-,+,Mixed
+POWERGRID,Mar-15,+,-,+,Mixed
+POWERGRID,Mar-16,+,-,+,Mixed
+POWERGRID,Mar-17,+,-,+,Mixed
+POWERGRID,Mar-18,+,-,+,Mixed
+POWERGRID,Mar-19,+,-,-,Shareholder Returns
+POWERGRID,Mar-20,+,-,-,Shareholder Returns
+POWERGRID,Mar-21,+,-,-,Reinvestor
+POWERGRID,Mar-22,+,+,-,Liquidating Assets
+POWERGRID,Mar-23,+,-,-,Shareholder Returns
+POWERGRID,Mar-24,+,-,-,Reinvestor
+RECLTD,Mar-13,-,+,+,Distress Signal
+RECLTD,Mar-14,-,+,+,Distress Signal
+RECLTD,Mar-15,-,+,+,Distress Signal
+RECLTD,Mar-16,-,-,+,Growth Funded by Debt
+RECLTD,Mar-17,+,-,-,Shareholder Returns
+RECLTD,Mar-18,-,+,+,Distress Signal
+RECLTD,Mar-19,-,+,+,Distress Signal
+RECLTD,Mar-20,-,+,+,Distress Signal
+RECLTD,Mar-21,-,+,+,Distress Signal
+RECLTD,Mar-22,-,-,+,Growth Funded by Debt
+RECLTD,Mar-23,-,-,+,Growth Funded by Debt
+RECLTD,Mar-24,-,-,+,Growth Funded by Debt
+RELIANCE,Mar-13,+,-,+,Mixed
+RELIANCE,Mar-14,+,-,+,Mixed
+RELIANCE,Mar-15,+,-,+,Mixed
+RELIANCE,Mar-16,+,-,-,Reinvestor
+RELIANCE,Mar-17,+,-,+,Mixed
+RELIANCE,Mar-18,+,-,-,Shareholder Returns
+RELIANCE,Mar-19,+,-,+,Mixed
+RELIANCE,Mar-20,+,-,-,Shareholder Returns
+RELIANCE,Mar-21,+,-,+,Mixed
+RELIANCE,Mar-22,+,-,+,Mixed
+RELIANCE,Mar-23,+,-,+,Mixed
+RELIANCE,Mar-24,+,-,-,Shareholder Returns
+SBILIFE,Mar-13,+,-,-,Shareholder Returns
+SBILIFE,Mar-14,+,-,-,Reinvestor
+SBILIFE,Mar-15,+,-,-,Shareholder Returns
+SBILIFE,Mar-16,+,-,-,Reinvestor
+SBILIFE,Mar-17,+,-,-,Reinvestor
+SBILIFE,Mar-18,+,-,-,Shareholder Returns
+SBILIFE,Mar-19,+,-,-,Reinvestor
+SBILIFE,Mar-20,+,-,-,Shareholder Returns
+SBILIFE,Mar-21,+,-,+,Mixed
+SBILIFE,Mar-22,+,-,-,Shareholder Returns
+SBILIFE,Mar-23,+,-,-,Reinvestor
+SBILIFE,Mar-24,+,-,-,Reinvestor
+SBIN,Mar-13,+,-,-,Shareholder Returns
+SBIN,Mar-14,+,-,+,Mixed
+SBIN,Mar-15,+,-,-,Shareholder Returns
+SBIN,Mar-16,+,-,+,Mixed
+SBIN,Mar-17,+,-,-,Shareholder Returns
+SBIN,Mar-18,-,+,+,Distress Signal
+SBIN,Mar-19,+,+,+,Cash Accumulator
+SBIN,Mar-20,+,-,+,Mixed
+SBIN,Mar-21,+,-,+,Mixed
+SBIN,Mar-22,+,-,-,Shareholder Returns
+SBIN,Mar-23,-,-,+,Growth Funded by Debt
+SBIN,Mar-24,+,-,-,Shareholder Returns
+SHREECEM,Jun-13,+,-,-,Shareholder Returns
+SHREECEM,Jun-14,+,-,-,Shareholder Returns
+SHREECEM,Jun-15,+,-,-,Reinvestor
+SHREECEM,Mar-16,+,-,-,Shareholder Returns
+SHREECEM,Mar-17,+,-,-,Reinvestor
+SHREECEM,Mar-18,+,-,+,Mixed
+SHREECEM,Mar-19,+,-,-,Shareholder Returns
+SHREECEM,Mar-20,+,-,+,Mixed
+SHREECEM,Mar-21,+,-,-,Shareholder Returns
+SHREECEM,Mar-22,+,-,-,Reinvestor
+SHREECEM,Mar-23,+,-,-,Reinvestor
+SHREECEM,Mar-24,+,-,-,Shareholder Returns
+SHRIRAMFIN,Mar-13,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-14,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-15,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-16,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-17,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-18,-,+,+,Distress Signal
+SHRIRAMFIN,Mar-19,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-20,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-21,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-22,-,-,+,Growth Funded by Debt
+SHRIRAMFIN,Mar-23,-,+,+,Distress Signal
+SHRIRAMFIN,Mar-24,-,-,+,Growth Funded by Debt
+SIEMENS,Sep-11,+,+,-,Liquidating Assets
+SIEMENS,Sep-14,+,+,-,Liquidating Assets
+SIEMENS,Sep-15,+,+,-,Liquidating Assets
+SIEMENS,Sep-16,+,+,-,Liquidating Assets
+SIEMENS,Sep-17,+,+,-,Liquidating Assets
+SIEMENS,Sep-18,+,-,-,Reinvestor
+SIEMENS,Sep-19,+,-,-,Reinvestor
+SIEMENS,Sep-20,+,+,-,Liquidating Assets
+SIEMENS,Sep-21,+,-,-,Reinvestor
+SIEMENS,Sep-22,+,-,-,Shareholder Returns
+SIEMENS,Sep-23,+,-,-,Shareholder Returns
+SIEMENS,Sep-24,+,-,-,Shareholder Returns
+SUNPHARMA,Mar-13,+,-,-,Shareholder Returns
+SUNPHARMA,Mar-14,+,-,+,Mixed
+SUNPHARMA,Mar-15,+,-,-,Shareholder Returns
+SUNPHARMA,Mar-16,+,-,-,Shareholder Returns
+SUNPHARMA,Mar-17,+,-,-,Shareholder Returns
+SUNPHARMA,Mar-18,+,-,-,Reinvestor
+SUNPHARMA,Mar-19,+,-,-,Reinvestor
+SUNPHARMA,Mar-20,+,-,-,Reinvestor
+SUNPHARMA,Mar-21,+,+,-,Liquidating Assets
+SUNPHARMA,Mar-22,+,-,-,Reinvestor
+SUNPHARMA,Mar-23,+,-,+,Mixed
+SUNPHARMA,Mar-24,+,-,-,Shareholder Returns
+TATACONSUM,Mar-13,+,+,+,Cash Accumulator
+TATACONSUM,Mar-14,+,-,-,Shareholder Returns
+TATACONSUM,Mar-15,+,-,-,Reinvestor
+TATACONSUM,Mar-16,+,+,-,Liquidating Assets
+TATACONSUM,Mar-17,+,+,-,Liquidating Assets
+TATACONSUM,Mar-18,+,-,-,Shareholder Returns
+TATACONSUM,Mar-19,+,+,-,Liquidating Assets
+TATACONSUM,Mar-20,+,-,-,Shareholder Returns
+TATACONSUM,Mar-21,+,-,-,Shareholder Returns
+TATACONSUM,Mar-22,+,-,-,Reinvestor
+TATACONSUM,Mar-23,+,-,-,Reinvestor
+TATACONSUM,Mar-24,+,-,+,Mixed
+TATAMOTORS,Mar-13,+,-,-,Reinvestor
+TATAMOTORS,Mar-14,+,-,-,Shareholder Returns
+TATAMOTORS,Mar-15,+,-,+,Mixed
+TATAMOTORS,Mar-16,+,-,-,Reinvestor
+TATAMOTORS,Mar-17,+,-,+,Mixed
+TATAMOTORS,Mar-18,+,-,+,Mixed
+TATAMOTORS,Mar-19,+,-,+,Mixed
+TATAMOTORS,Mar-20,+,-,+,Mixed
+TATAMOTORS,Mar-21,+,-,+,Mixed
+TATAMOTORS,Mar-22,+,-,-,Shareholder Returns
+TATAMOTORS,Mar-23,+,-,-,Reinvestor
+TATAMOTORS,Mar-24,+,-,-,Shareholder Returns
+TATAPOWER,Mar-13,+,-,-,Reinvestor
+TATAPOWER,Mar-14,+,-,-,Reinvestor
+TATAPOWER,Mar-15,+,-,-,Reinvestor
+TATAPOWER,Mar-16,+,-,-,Reinvestor
+TATAPOWER,Mar-17,+,-,+,Mixed
+TATAPOWER,Mar-18,+,-,-,Shareholder Returns
+TATAPOWER,Mar-19,+,-,-,Reinvestor
+TATAPOWER,Mar-20,+,-,-,Shareholder Returns
+TATAPOWER,Mar-21,+,+,-,Liquidating Assets
+TATAPOWER,Mar-22,+,-,-,Reinvestor
+TATAPOWER,Mar-23,+,-,+,Mixed
+TATAPOWER,Mar-24,+,-,-,Reinvestor
+TATASTEEL,Mar-13,+,-,-,Reinvestor
+TATASTEEL,Mar-14,+,-,+,Mixed
+TATASTEEL,Mar-15,+,-,-,Shareholder Returns
+TATASTEEL,Mar-16,+,-,-,Reinvestor
+TATASTEEL,Mar-17,+,-,-,Reinvestor
+TATASTEEL,Mar-18,+,-,+,Mixed
+TATASTEEL,Mar-19,+,-,-,Reinvestor
+TATASTEEL,Mar-20,+,-,-,Shareholder Returns
+TATASTEEL,Mar-21,+,-,-,Reinvestor
+TATASTEEL,Mar-22,+,-,-,Shareholder Returns
+TATASTEEL,Mar-23,+,-,-,Reinvestor
+TATASTEEL,Mar-24,+,-,-,Reinvestor
+TCS,Mar-13,+,-,-,Reinvestor
+TCS,Mar-14,+,-,-,Reinvestor
+TCS,Mar-15,+,-,-,Shareholder Returns
+TCS,Mar-16,+,-,-,Shareholder Returns
+TCS,Mar-17,+,-,-,Reinvestor
+TCS,Mar-18,+,+,-,Liquidating Assets
+TCS,Mar-19,+,+,-,Liquidating Assets
+TCS,Mar-20,+,+,-,Liquidating Assets
+TCS,Mar-21,+,-,-,Reinvestor
+TCS,Mar-22,+,-,-,Shareholder Returns
+TCS,Mar-23,+,+,-,Liquidating Assets
+TCS,Mar-24,+,+,-,Liquidating Assets
+TECHM,Mar-13,+,-,+,Mixed
+TECHM,Mar-14,+,+,-,Liquidating Assets
+TECHM,Mar-15,+,-,-,Reinvestor
+TECHM,Mar-16,+,-,-,Shareholder Returns
+TECHM,Mar-17,+,-,-,Reinvestor
+TECHM,Mar-18,+,-,-,Reinvestor
+TECHM,Mar-19,+,-,-,Shareholder Returns
+TECHM,Mar-20,+,+,-,Liquidating Assets
+TECHM,Mar-21,+,-,-,Reinvestor
+TECHM,Mar-22,+,+,-,Liquidating Assets
+TECHM,Mar-23,+,-,-,Shareholder Returns
+TECHM,Mar-24,+,-,-,Shareholder Returns
+TITAN,Mar-13,+,-,-,Shareholder Returns
+TITAN,Mar-14,-,-,+,Growth Funded by Debt
+TITAN,Mar-15,+,-,-,Reinvestor
+TITAN,Mar-16,+,-,-,Reinvestor
+TITAN,Mar-17,+,-,-,Shareholder Returns
+TITAN,Mar-18,-,+,-,Unknown
+TITAN,Mar-19,+,-,-,Reinvestor
+TITAN,Mar-20,-,+,-,Unknown
+TITAN,Mar-21,+,-,-,Shareholder Returns
+TITAN,Mar-22,-,+,-,Unknown
+TITAN,Mar-23,+,-,+,Mixed
+TITAN,Mar-24,+,-,-,Shareholder Returns
+TORNTPHARM,Mar-13,+,-,+,Mixed
+TORNTPHARM,Mar-14,+,-,+,Mixed
+TORNTPHARM,Mar-15,+,-,+,Mixed
+TORNTPHARM,Mar-16,+,-,-,Shareholder Returns
+TORNTPHARM,Mar-17,+,-,-,Shareholder Returns
+TORNTPHARM,Mar-18,+,-,+,Mixed
+TORNTPHARM,Mar-19,+,-,-,Shareholder Returns
+TORNTPHARM,Mar-20,+,+,-,Liquidating Assets
+TORNTPHARM,Mar-21,+,-,-,Reinvestor
+TORNTPHARM,Mar-22,+,-,-,Reinvestor
+TORNTPHARM,Mar-23,+,-,+,Mixed
+TORNTPHARM,Mar-24,+,-,-,Shareholder Returns
+TRENT,Mar-13,+,-,+,Mixed
+TRENT,Mar-14,-,-,-,Pre-Revenue
+TRENT,Mar-15,-,-,+,Growth Funded by Debt
+TRENT,Mar-16,+,-,-,Reinvestor
+TRENT,Mar-17,+,-,-,Shareholder Returns
+TRENT,Mar-18,+,-,-,Reinvestor
+TRENT,Mar-19,+,-,+,Mixed
+TRENT,Mar-20,+,-,+,Mixed
+TRENT,Mar-21,+,+,-,Liquidating Assets
+TRENT,Mar-22,+,+,-,Liquidating Assets
+TRENT,Mar-23,+,-,-,Shareholder Returns
+TRENT,Mar-24,+,-,-,Shareholder Returns
+TVSMOTOR,Mar-13,+,-,-,Reinvestor
+TVSMOTOR,Mar-14,+,-,-,Shareholder Returns
+TVSMOTOR,Mar-15,+,-,+,Mixed
+TVSMOTOR,Mar-16,+,-,-,Shareholder Returns
+TVSMOTOR,Mar-17,+,-,-,Reinvestor
+TVSMOTOR,Mar-18,+,-,+,Mixed
+TVSMOTOR,Mar-19,-,-,+,Growth Funded by Debt
+TVSMOTOR,Mar-20,+,-,+,Mixed
+TVSMOTOR,Mar-21,+,-,+,Mixed
+TVSMOTOR,Mar-22,-,-,+,Growth Funded by Debt
+TVSMOTOR,Mar-23,-,-,+,Growth Funded by Debt
+TVSMOTOR,Mar-24,-,-,+,Growth Funded by Debt
+ULTRACEMCO,Mar-13,+,-,+,Mixed
+ULTRACEMCO,Mar-14,+,-,-,Shareholder Returns
+ULTRACEMCO,Mar-15,+,-,-,Reinvestor
+ULTRACEMCO,Mar-16,+,-,-,Shareholder Returns
+ULTRACEMCO,Mar-17,+,-,-,Reinvestor
+ULTRACEMCO,Mar-18,+,+,-,Liquidating Assets
+ULTRACEMCO,Mar-19,+,+,-,Liquidating Assets
+ULTRACEMCO,Mar-20,+,-,-,Reinvestor
+ULTRACEMCO,Mar-21,+,-,-,Reinvestor
+ULTRACEMCO,Mar-22,+,+,-,Liquidating Assets
+ULTRACEMCO,Mar-23,+,-,-,Shareholder Returns
+ULTRACEMCO,Mar-24,+,-,-,Shareholder Returns
+UNIONBANK,Mar-13,-,-,+,Growth Funded by Debt
+UNIONBANK,Mar-14,+,-,+,Mixed
+UNIONBANK,Mar-15,-,-,+,Growth Funded by Debt
+UNIONBANK,Mar-16,+,-,-,Shareholder Returns
+UNIONBANK,Mar-17,-,-,+,Growth Funded by Debt
+UNIONBANK,Mar-18,+,-,+,Mixed
+UNIONBANK,Mar-19,-,-,+,Growth Funded by Debt
+UNIONBANK,Mar-20,-,-,+,Growth Funded by Debt
+UNIONBANK,Mar-21,+,-,-,Shareholder Returns
+UNIONBANK,Mar-22,+,-,-,Shareholder Returns
+UNIONBANK,Mar-23,+,-,-,Reinvestor
+UNIONBANK,Mar-24,+,-,-,Shareholder Returns
+UNITDSPR,Mar-13,+,-,-,Reinvestor
+UNITDSPR,Mar-14,-,-,+,Growth Funded by Debt
+UNITDSPR,Mar-15,-,+,-,Unknown
+UNITDSPR,Mar-16,+,+,-,Liquidating Assets
+UNITDSPR,Mar-17,+,-,-,Reinvestor
+UNITDSPR,Mar-18,+,+,-,Liquidating Assets
+UNITDSPR,Mar-19,+,-,-,Shareholder Returns
+UNITDSPR,Mar-20,+,-,-,Reinvestor
+UNITDSPR,Mar-21,+,-,-,Shareholder Returns
+UNITDSPR,Mar-22,+,-,-,Reinvestor
+UNITDSPR,Mar-23,+,-,-,Shareholder Returns
+UNITDSPR,Mar-24,+,+,-,Liquidating Assets
+VBL,Dec-12,+,-,+,Mixed
+VBL,Dec-13,+,-,+,Mixed
+VBL,Dec-14,+,-,+,Mixed
+VBL,Dec-15,+,-,-,Shareholder Returns
+VBL,Dec-16,+,-,+,Mixed
+VBL,Dec-17,+,-,+,Mixed
+VBL,Dec-18,+,-,-,Reinvestor
+VBL,Dec-19,+,-,+,Mixed
+VBL,Dec-20,+,-,-,Reinvestor
+VBL,Dec-21,+,-,-,Shareholder Returns
+VBL,Dec-22,+,-,-,Shareholder Returns
+VBL,Dec-23,+,-,+,Mixed
+VEDL,Mar-13,+,-,+,Mixed
+VEDL,Mar-14,+,-,-,Shareholder Returns
+VEDL,Mar-15,+,-,-,Reinvestor
+VEDL,Mar-16,+,-,-,Shareholder Returns
+VEDL,Mar-17,+,+,-,Liquidating Assets
+VEDL,Mar-18,+,+,-,Liquidating Assets
+VEDL,Mar-19,+,-,-,Shareholder Returns
+VEDL,Mar-20,+,-,-,Reinvestor
+VEDL,Mar-21,+,-,-,Reinvestor
+VEDL,Mar-22,+,-,-,Shareholder Returns
+VEDL,Mar-23,+,-,-,Reinvestor
+VEDL,Mar-24,+,-,-,Reinvestor
+WIPRO,Mar-13,+,-,-,Shareholder Returns
+WIPRO,Mar-14,+,-,-,Shareholder Returns
+WIPRO,Mar-15,+,-,-,Shareholder Returns
+WIPRO,Mar-16,+,-,-,Reinvestor
+WIPRO,Mar-17,+,-,-,Reinvestor
+WIPRO,Mar-18,+,+,-,Liquidating Assets
+WIPRO,Mar-19,+,+,-,Liquidating Assets
+WIPRO,Mar-20,+,+,-,Liquidating Assets
+WIPRO,Mar-21,+,+,-,Liquidating Assets
+WIPRO,Mar-22,+,-,+,Mixed
+WIPRO,Mar-23,+,-,-,Reinvestor
+WIPRO,Mar-24,+,+,-,Liquidating Assets
+ZOMATO,Mar-20,-,+,+,Distress Signal
+ZOMATO,Mar-21,-,-,+,Growth Funded by Debt
+ZOMATO,Mar-22,-,-,+,Growth Funded by Debt
+ZOMATO,Mar-23,-,+,-,Unknown
+ZOMATO,Mar-24,+,-,-,Shareholder Returns
+ZYDUSLIFE,Mar-13,+,-,+,Mixed
+ZYDUSLIFE,Mar-14,+,-,-,Reinvestor
+ZYDUSLIFE,Mar-15,+,-,-,Shareholder Returns
+ZYDUSLIFE,Mar-16,+,-,-,Shareholder Returns
+ZYDUSLIFE,Mar-17,+,-,+,Mixed
+ZYDUSLIFE,Mar-18,+,-,+,Mixed
+ZYDUSLIFE,Mar-19,+,-,+,Mixed
+ZYDUSLIFE,Mar-20,+,-,-,Shareholder Returns
+ZYDUSLIFE,Mar-21,+,-,-,Reinvestor
+ZYDUSLIFE,Mar-22,+,-,-,Shareholder Returns
+ZYDUSLIFE,Mar-23,+,+,-,Liquidating Assets
+ZYDUSLIFE,Mar-24,+,-,-,Reinvestor
