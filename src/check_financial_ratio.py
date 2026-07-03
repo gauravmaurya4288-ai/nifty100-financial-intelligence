@@ -4,18 +4,20 @@ import pandas as pd
 conn = sqlite3.connect("db/nifty100.db")
 
 df = pd.read_sql(
-    "SELECT * FROM financial_ratios LIMIT 10",
+    "SELECT * FROM financial_ratios",
     conn
 )
 
-print(df)
+print("=" * 50)
+print("Financial Ratios Table")
+print("=" * 50)
 
-count = pd.read_sql(
-    "SELECT COUNT(*) AS total_rows FROM financial_ratios",
-    conn
-)
+print(df.head())
 
-print("\nTotal Rows:")
-print(count)
+print("\nRows :", len(df))
+
+print("\nColumns")
+
+print(df.columns.tolist())
 
 conn.close()
