@@ -1,12 +1,20 @@
 import sys
 from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(PROJECT_ROOT))
-
 import sqlite3
 import pandas as pd
 import numpy as np
+
+# ---------------------------------------------------------
+# Project Root
+# ---------------------------------------------------------
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+sys.path.insert(0, str(PROJECT_ROOT))
+
+# ---------------------------------------------------------
+# Analytics Modules
+# ---------------------------------------------------------
 
 from src.analytics.ratios import (
     net_profit_margin,
@@ -35,13 +43,23 @@ from src.analytics.historical_cagr import (
     calculate_company_cagr
 )
 
-DB_PATH = "db/nifty100.db"
+# ---------------------------------------------------------
+# Database
+# ---------------------------------------------------------
+
+DB_PATH = PROJECT_ROOT / "db" / "nifty100.db"
 
 conn = sqlite3.connect(DB_PATH)
 
-print("=" * 70)
-print("Loading Source Tables")
-print("=" * 70)
+print("=" * 80)
+print("POPULATE FINANCIAL RATIOS")
+print("=" * 80)
+
+# ---------------------------------------------------------
+# Load Source Tables
+# ---------------------------------------------------------
+
+print("\nLoading Source Tables...\n")
 
 profit = pd.read_sql(
     "SELECT * FROM profit_loss",
@@ -78,158 +96,344 @@ sectors = pd.read_sql(
     conn
 )
 
-print("Profit :", profit.shape)
-print("Balance:", balance.shape)
-print("Cash :", cash.shape)
-print("Market :", market.shape)
+print("Profit Loss :", profit.shape)
+print("Balance Sheet :", balance.shape)
+print("Cash Flow :", cash.shape)
+print("Market Cap :", market.shape)
 print("Analysis :", analysis.shape)
 print("Companies :", companies.shape)
 print("Sectors :", sectors.shape)
 
-print("\n" + "=" * 70)
-print("Preparing Historical CAGR")
-print("=" * 70)
+# ---------------------------------------------------------
+# Prepare Latest Market Data
+# ---------------------------------------------------------
 
-# ---------------------------------------------------
-# Historical CAGR Calculation
-# ---------------------------------------------------
+market["year"] = market["year"].astype(int)
 
-profit_cagr = profit[
-    [
-        "company_id",
-        "year",
-        "sales",
-        "net_profit",
-        "eps"
-    ]
-].copy()
+market_latest = (
 
-cagr_df = calculate_company_cagr(profit_cagr)
+    market
 
-print("Historical CAGR Rows :", len(cagr_df))
+    .sort_values("year")
 
-# ---------------------------------------------------
-# Merge Financial Tables
-# ---------------------------------------------------
+    .drop_duplicates(
 
-print("\n" + "=" * 70)
-print("Merging Tables")
-print("=" * 70)
+        subset="company_id",
+
+        keep="last"
+
+    )
+
+)
+
+print("\nLatest Market Records")
+
+print(market_latest.head())
+
+# ---------------------------------------------------------
+# Historical CAGR
+# ---------------------------------------------------------
+
+print("\nPreparing Historical CAGR...\n")
+
+cagr_df = calculate_company_cagr(
+    profit.copy()
+)
+
+print("Historical CAGR Records :", len(cagr_df))
+
+# ---------------------------------------------------------
+# Helper Function
+# ---------------------------------------------------------
+
+def annual_records(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Keep only annual financial statements.
+    """
+
+    years = (
+
+        df["year"]
+
+        .astype(str)
+
+        .str.upper()
+
+    )
+
+    mask = (
+
+        ~years.str.contains("TTM")
+
+        &
+
+        ~years.str.contains("9M")
+
+        &
+
+        ~years.str.contains("Q")
+
+    )
+
+    return df.loc[mask].copy()
+
+print("=" * 80)
+
+# ---------------------------------------------------------
+# Merge Source Tables
+# ---------------------------------------------------------
+
+print("\n" + "=" * 80)
+print("MERGING SOURCE TABLES")
+print("=" * 80)
 
 df = (
+
     profit
+
     .merge(
+
         balance,
+
         on=["company_id", "year"],
-        how="left",
-        suffixes=("", "_bal")
-    )
-    .merge(
-        cash,
-        on=["company_id", "year"],
-        how="left",
-        suffixes=("", "_cash")
-    )
-    .merge(
-        market,
-        on=["company_id", "year"],
-        how="left",
-        suffixes=("", "_market")
-    )
-    .merge(
-        cagr_df,
-        on=["company_id", "year"],
+
         how="left"
+
     )
+
     .merge(
+
+        cash,
+
+        on=["company_id", "year"],
+
+        how="left"
+
+    )
+
+    .merge(
+
+        cagr_df,
+
+        on=["company_id", "year"],
+
+        how="left"
+
+    )
+
+    .merge(
+
         analysis,
+
         on="company_id",
-        how="left",
-        suffixes=("", "_analysis")
+
+        how="left"
+
     )
+
     .merge(
+
         companies,
+
         on="company_id",
-        how="left",
-        suffixes=("", "_company")
+
+        how="left"
+
     )
+
     .merge(
+
         sectors,
+
         on="company_id",
-        how="left",
-        suffixes=("", "_sector")
+
+        how="left"
+
     )
+
+    .merge(
+
+        market_latest[
+
+            [
+
+                "company_id",
+
+                "market_cap_crore",
+
+                "enterprise_value_crore",
+
+                "pe_ratio",
+
+                "pb_ratio",
+
+                "ev_ebitda",
+
+                "dividend_yield_pct"
+
+            ]
+
+        ],
+
+        on="company_id",
+
+        how="left"
+
+    )
+
 )
 
-print("Merged Shape :", df.shape)
+print("\nMerged Shape :", df.shape)
 
-# ---------------------------------------------------
-# Replace Missing Numeric Values
-# ---------------------------------------------------
+# ---------------------------------------------------------
+# Remove Duplicate Records
+# ---------------------------------------------------------
 
-numeric_columns = df.select_dtypes(
-    include=["number"]
-).columns
+df = (
 
-df[numeric_columns] = df[numeric_columns].fillna(0)
+    df
 
-# ---------------------------------------------------
-# Remove Duplicate Company-Year Rows
-# ---------------------------------------------------
+    .drop_duplicates(
 
-df = df.drop_duplicates(
-    subset=["company_id", "year"]
+        subset=[
+
+            "company_id",
+
+            "year"
+
+        ]
+
+    )
+
 )
 
-print("After Removing Duplicates :", len(df))
+print("After Removing Duplicates :", df.shape)
 
-# ---------------------------------------------------
-# Remove Non-Annual Records
-# ---------------------------------------------------
+# ---------------------------------------------------------
+# Keep Annual Statements Only
+# ---------------------------------------------------------
 
-df = df[
-    ~df["year"].astype(str).str.contains(
-        "TTM|9m|15",
-        case=False,
-        na=False
-    )
-].copy()
+df = annual_records(df)
 
-print("Annual Records :", len(df))
+print("Annual Records :", df.shape)
 
-# ---------------------------------------------------
+# ---------------------------------------------------------
 # Sort Data
-# ---------------------------------------------------
+# ---------------------------------------------------------
 
-df = df.sort_values(
+df = (
+
+    df
+
+    .sort_values(
+
+        [
+
+            "company_id",
+
+            "year"
+
+        ]
+
+    )
+
+    .reset_index(
+
+        drop=True
+
+    )
+
+)
+
+# ---------------------------------------------------------
+# Replace Infinite Values
+# ---------------------------------------------------------
+
+df = df.replace(
+
     [
-        "company_id",
-        "year"
-    ]
-).reset_index(drop=True)
 
-print(df.head())
+        np.inf,
 
-# ---------------------------------------------------
-# Prepare Output
-# ---------------------------------------------------
+        -np.inf
+
+    ],
+
+    np.nan
+
+)
+
+# ---------------------------------------------------------
+# Verify Important Columns
+# ---------------------------------------------------------
+
+print("\nColumns Loaded")
+
+print(df.columns.tolist())
+
+print("\nMarket Data Check")
+
+print(
+
+    df[
+
+        [
+
+            "market_cap_crore",
+
+            "pe_ratio",
+
+            "pb_ratio",
+
+            "ev_ebitda",
+
+            "dividend_yield_pct"
+
+        ]
+
+    ].describe()
+
+)
+
+print("\nSample Records")
+
+print(
+
+    df.head()
+
+)
+
+print("=" * 80)
+
+# ---------------------------------------------------------
+# Calculate Financial Ratios
+# ---------------------------------------------------------
+
+print("\n" + "=" * 80)
+print("CALCULATING FINANCIAL RATIOS")
+print("=" * 80)
 
 rows = []
 
-print("\nReady for KPI Calculation...")
-print("=" * 70)
+def safe(x):
 
-print("\n" + "=" * 70)
-print("Calculating Financial Ratios")
-print("=" * 70)
+    if pd.isna(x):
+        return 0
+
+    return float(x)
+
+# ---------------------------------------
+# Start Processing
+# ---------------------------------------
+
 
 for _, row in df.iterrows():
 
     try:
 
-        # --------------------------------------------------
-        # Profitability Ratios
-        # --------------------------------------------------
+        # -------------------------------------------------
+        # Profitability
+        # -------------------------------------------------
 
         npm = net_profit_margin(
             row["net_profit"],
@@ -259,9 +463,9 @@ for _, row in df.iterrows():
             row["total_assets"]
         )
 
-        # --------------------------------------------------
+        # -------------------------------------------------
         # Leverage
-        # --------------------------------------------------
+        # -------------------------------------------------
 
         de = debt_to_equity(
             row["borrowings"],
@@ -294,16 +498,16 @@ for _, row in df.iterrows():
             row["total_assets"]
         )
 
-        # --------------------------------------------------
-        # Cash Flow KPIs
-        # --------------------------------------------------
+        # -------------------------------------------------
+        # Cash Flow
+        # -------------------------------------------------
 
         fcf = free_cash_flow(
             row["operating_activity"],
             row["investing_activity"]
         )
 
-        cfo_score = cfo_quality_score(
+        cfo = cfo_quality_score(
             row["operating_activity"],
             row["net_profit"]
         )
@@ -313,7 +517,7 @@ for _, row in df.iterrows():
             row["sales"]
         )
 
-        fcf_conversion_rate = fcf_conversion(
+        fcf_conv = fcf_conversion(
             fcf,
             row["operating_profit"]
         )
@@ -324,121 +528,97 @@ for _, row in df.iterrows():
             row["financing_activity"]
         )
 
-        # --------------------------------------------------
-        # CAGR
-        # --------------------------------------------------
-
-        revenue_cagr3 = None
-        revenue_cagr5 = row.get("revenue_cagr_5yr", None)
-        revenue_cagr10 = None
-
-        pat_cagr3 = None
-        pat_cagr5 = row.get("pat_cagr_5yr", None)
-        pat_cagr10 = None
-
-        eps_cagr3 = None
-        eps_cagr5 = row.get("eps_cagr_5yr", None)
-        eps_cagr10 = None
-
-        revenue_flag = row.get(
-            "revenue_flag",
-            None
-        )
-
-        pat_flag = row.get(
-            "pat_flag",
-            None
-        )
-
-        eps_flag = row.get(
-            "eps_flag",
-            None
-        )
-
-        # --------------------------------------------------
+        # -------------------------------------------------
         # Composite Score
-        # --------------------------------------------------
+        # -------------------------------------------------
 
         score = (
-            (0 if roe is None else roe) * 0.35
-            +
-            (0 if npm is None else npm) * 0.20
-            +
-            (0 if turnover is None else turnover) * 10 * 0.10
-            +
-            (0 if revenue_cagr5 is None else revenue_cagr5) * 0.15
-            +
-            (0 if pat_cagr5 is None else pat_cagr5) * 0.10
-            +
-            (0 if de is None else max(0, 10 - de)) * 2
+
+            safe(roe) * 0.35 +
+
+            safe(npm) * 0.20 +
+
+            safe(turnover) * 1.00 +
+
+            safe(row.get("revenue_cagr_5yr")) * 0.15 +
+
+            safe(row.get("pat_cagr_5yr")) * 0.10 +
+
+            max(0, 10 - safe(de)) * 2
+
         )
 
         score = round(score, 2)
+        
 
-        # --------------------------------------------------
-        # Store Row
-        # --------------------------------------------------
+        # -------------------------------------------------
+        # Store Record
+        # -------------------------------------------------
 
         rows.append({
 
             "company_id": row["company_id"],
             "year": row["year"],
 
+            # Profitability
             "net_profit_margin_pct": npm,
             "operating_profit_margin_pct": opm,
             "return_on_equity_pct": roe,
             "return_on_capital_employed_pct": roce,
             "return_on_assets_pct": roa,
 
+            # Leverage
             "debt_to_equity": de,
             "high_leverage_flag": leverage,
-
             "interest_coverage": icr,
             "icr_label": icr_text,
             "icr_warning": icr_warn,
-
             "net_debt": debt,
             "asset_turnover": turnover,
 
+            # Cash Flow
             "free_cash_flow_cr": fcf,
-            "cfo_quality_score": cfo_score,
-
+            "cfo_quality_score": cfo,
             "capex_intensity_pct": capex_pct,
             "capex_category": capex_label,
-
-            "fcf_conversion_pct": fcf_conversion_rate,
+            "fcf_conversion_pct": fcf_conv,
             "capital_allocation_pattern": allocation,
 
-            "earnings_per_share": row["eps"],
+            # Market Valuation
+            "market_cap_crore": row["market_cap_crore"],
+            "enterprise_value_crore": row["enterprise_value_crore"],
+            "pe_ratio": row["pe_ratio"],
+            "pb_ratio": row["pb_ratio"],
+            "ev_ebitda": row["ev_ebitda"],
+            "dividend_yield_pct": row["dividend_yield_pct"],
 
+            # Financials
+            "earnings_per_share": row["eps"],
             "book_value_per_share":
                 row["equity_capital"] + row["reserves"],
+            "dividend_payout_ratio_pct": row["dividend_payout"],
+            "total_debt_cr": row["borrowings"],
+            "cash_from_operations_cr": row["operating_activity"],
 
-            "dividend_payout_ratio_pct":
-                row["dividend_payout"],
+            # CAGR
+            "revenue_cagr_3yr": None,
+            "revenue_cagr_5yr": row.get("revenue_cagr_5yr"),
+            "revenue_cagr_10yr": None,
 
-            "total_debt_cr":
-                row["borrowings"],
+            "pat_cagr_3yr": None,
+            "pat_cagr_5yr": row.get("pat_cagr_5yr"),
+            "pat_cagr_10yr": None,
 
-            "cash_from_operations_cr":
-                row["operating_activity"],
+            "eps_cagr_3yr": None,
+            "eps_cagr_5yr": row.get("eps_cagr_5yr"),
+            "eps_cagr_10yr": None,
 
-            "revenue_cagr_3yr": revenue_cagr3,
-            "revenue_cagr_5yr": revenue_cagr5,
-            "revenue_cagr_10yr": revenue_cagr10,
+            # Flags
+            "revenue_cagr_flag": row.get("revenue_flag"),
+            "pat_cagr_flag": row.get("pat_flag"),
+            "eps_cagr_flag": row.get("eps_flag"),
 
-            "pat_cagr_3yr": pat_cagr3,
-            "pat_cagr_5yr": pat_cagr5,
-            "pat_cagr_10yr": pat_cagr10,
-
-            "eps_cagr_3yr": eps_cagr3,
-            "eps_cagr_5yr": eps_cagr5,
-            "eps_cagr_10yr": eps_cagr10,
-
-            "revenue_cagr_flag": revenue_flag,
-            "pat_cagr_flag": pat_flag,
-            "eps_cagr_flag": eps_flag,
-
+            # Composite
             "composite_quality_score": score
 
         })
@@ -446,31 +626,41 @@ for _, row in df.iterrows():
     except Exception as e:
 
         print(
-            f"Error : {row['company_id']} | {row['year']}"
+            f"Skipped -> {row['company_id']} | {row['year']}"
         )
 
         print(e)
 
 print("\nRows Generated :", len(rows))
 
-print("\n" + "=" * 70)
-print("Creating Financial Ratios DataFrame")
-print("=" * 70)
+financial = pd.DataFrame(rows)
 
-# --------------------------------------------------
-# Convert rows into DataFrame
-# --------------------------------------------------
+print("\nFinancial DataFrame Shape :", financial.shape)
+
+print(financial.head())
+
+print("=" * 80)
+
+# ---------------------------------------------------------
+# Final DataFrame
+# ---------------------------------------------------------
+
+print("\n" + "=" * 80)
+print("FINAL DATAFRAME")
+print("=" * 80)
 
 financial = pd.DataFrame(rows)
 
 print("Rows :", len(financial))
 print("Columns :", len(financial.columns))
 
-print(financial.head())
+print("\nColumn Names")
 
-# --------------------------------------------------
-# Ensure all required columns exist
-# --------------------------------------------------
+print(financial.columns.tolist())
+
+# ---------------------------------------------------------
+# Required Column Order
+# ---------------------------------------------------------
 
 required_columns = [
 
@@ -502,8 +692,17 @@ required_columns = [
     "fcf_conversion_pct",
     "capital_allocation_pattern",
 
+    "market_cap_crore",
+    "enterprise_value_crore",
+
+    "pe_ratio",
+    "pb_ratio",
+    "ev_ebitda",
+    "dividend_yield_pct",
+
     "earnings_per_share",
     "book_value_per_share",
+
     "dividend_payout_ratio_pct",
 
     "total_debt_cr",
@@ -529,101 +728,134 @@ required_columns = [
 
 ]
 
-for column in required_columns:
+# ---------------------------------------------------------
+# Add Missing Columns
+# ---------------------------------------------------------
 
-    if column not in financial.columns:
+for col in required_columns:
 
-        financial[column] = None
+    if col not in financial.columns:
+
+        financial[col] = None
 
 financial = financial[required_columns]
 
-# --------------------------------------------------
-# Replace NaN values
-# --------------------------------------------------
-
-financial = financial.replace(
-    [np.inf, -np.inf],
-    np.nan
-)
-
-# Optional: keep NULLs in SQLite
-# financial = financial.fillna(0)
-
-print("\nFinal DataFrame Shape :", financial.shape)
-
-print("\nFinal Columns")
-
-print(financial.columns.tolist())
-
-print("\nSample Data")
-
-print(financial.head())
-
-print("\n" + "=" * 70)
-print("Writing to SQLite")
-print("=" * 70)
-
-# --------------------------------------------------
-# Remove old data
-# --------------------------------------------------
+# ---------------------------------------------------------
+# Remove Existing Data
+# ---------------------------------------------------------
 
 cursor = conn.cursor()
 
-cursor.execute("DELETE FROM financial_ratios")
-
-conn.commit()
-
-# --------------------------------------------------
-# Insert new data
-# --------------------------------------------------
-
-financial.to_sql(
-    "financial_ratios",
-    conn,
-    if_exists="append",
-    index=False
+cursor.execute(
+    "DELETE FROM financial_ratios"
 )
 
 conn.commit()
 
-print("Financial Ratios inserted successfully.")
+print("\nOld Records Deleted")
 
-# --------------------------------------------------
-# Verify row count
-# --------------------------------------------------
+# ---------------------------------------------------------
+# Insert New Data
+# ---------------------------------------------------------
+
+financial.to_sql(
+
+    "financial_ratios",
+
+    conn,
+
+    if_exists="append",
+
+    index=False
+
+)
+
+print("\nData Inserted Successfully")
+
+# ---------------------------------------------------------
+# Verification
+# ---------------------------------------------------------
 
 count = pd.read_sql(
+
     """
     SELECT COUNT(*) AS total_rows
     FROM financial_ratios
     """,
+
     conn
+
 )
 
-print("\nRows inserted:")
+print("\nDatabase Row Count")
 
 print(count)
 
-# --------------------------------------------------
-# Verify columns
-# --------------------------------------------------
+# ---------------------------------------------------------
+# Verify Important Columns
+# ---------------------------------------------------------
 
-sample = pd.read_sql(
+verification = pd.read_sql(
+
     """
-    SELECT *
+    SELECT
+
+        COUNT(pe_ratio) AS pe,
+
+        COUNT(pb_ratio) AS pb,
+
+        COUNT(dividend_yield_pct) AS dividend,
+
+        COUNT(revenue_cagr_5yr) AS revenue,
+
+        COUNT(composite_quality_score) AS score
+
     FROM financial_ratios
-    LIMIT 5
+
     """,
+
     conn
+
 )
+
+print("\nVerification")
+
+print(verification)
+
+# ---------------------------------------------------------
+# Preview
+# ---------------------------------------------------------
 
 print("\nSample Data")
 
-print(sample)
+print(
+
+    financial.head()
+
+)
+
+# ---------------------------------------------------------
+# Save Backup
+# ---------------------------------------------------------
+
+financial.to_csv(
+
+    PROJECT_ROOT / "output" / "financial_ratios.csv",
+
+    index=False
+
+)
+
+print("\nCSV Exported")
+
+print(PROJECT_ROOT / "output" / "financial_ratios.csv")
+
+# ---------------------------------------------------------
+# Close Database
+# ---------------------------------------------------------
 
 conn.close()
 
-print("\n" + "=" * 70)
-print("Financial Ratio Population Completed Successfully")
-print("=" * 70)
-
+print("\n" + "=" * 80)
+print("FINANCIAL RATIOS POPULATION COMPLETED")
+print("=" * 80)

@@ -1,12 +1,10 @@
-DROP TABLE IF EXISTS financial_ratios;
-
 CREATE TABLE financial_ratios (
 
     company_id TEXT NOT NULL,
     year TEXT NOT NULL,
 
     -------------------------------------------------
-    -- Profitability Ratios
+    -- Profitability
     -------------------------------------------------
 
     net_profit_margin_pct REAL,
@@ -16,7 +14,7 @@ CREATE TABLE financial_ratios (
     return_on_assets_pct REAL,
 
     -------------------------------------------------
-    -- Leverage & Efficiency
+    -- Leverage
     -------------------------------------------------
 
     debt_to_equity REAL,
@@ -30,28 +28,47 @@ CREATE TABLE financial_ratios (
     asset_turnover REAL,
 
     -------------------------------------------------
-    -- Cash Flow KPIs
+    -- Cash Flow
     -------------------------------------------------
 
     free_cash_flow_cr REAL,
     cfo_quality_score TEXT,
+
     capex_intensity_pct REAL,
     capex_category TEXT,
+
     fcf_conversion_pct REAL,
+
     capital_allocation_pattern TEXT,
 
     -------------------------------------------------
-    -- Market / Valuation
+    -- Market Valuation
+    -------------------------------------------------
+
+    market_cap_crore REAL,
+    enterprise_value_crore REAL,
+
+    pe_ratio REAL,
+    pb_ratio REAL,
+    ev_ebitda REAL,
+
+    dividend_yield_pct REAL,
+
+    -------------------------------------------------
+    -- Other Financials
     -------------------------------------------------
 
     earnings_per_share REAL,
     book_value_per_share REAL,
+
     dividend_payout_ratio_pct REAL,
+
     total_debt_cr REAL,
+
     cash_from_operations_cr REAL,
 
     -------------------------------------------------
-    -- Growth Metrics
+    -- CAGR
     -------------------------------------------------
 
     revenue_cagr_3yr REAL,
@@ -67,7 +84,7 @@ CREATE TABLE financial_ratios (
     eps_cagr_10yr REAL,
 
     -------------------------------------------------
-    -- CAGR Flags
+    -- Flags
     -------------------------------------------------
 
     revenue_cagr_flag TEXT,
@@ -75,7 +92,7 @@ CREATE TABLE financial_ratios (
     eps_cagr_flag TEXT,
 
     -------------------------------------------------
-    -- Composite Score
+    -- Composite
     -------------------------------------------------
 
     composite_quality_score REAL,
@@ -86,9 +103,6 @@ CREATE TABLE financial_ratios (
 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
-    PRIMARY KEY (company_id, year),
-
-    FOREIGN KEY(company_id)
-        REFERENCES companies(company_id)
+    PRIMARY KEY(company_id, year)
 
 );

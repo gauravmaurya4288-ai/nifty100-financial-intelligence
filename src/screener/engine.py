@@ -1,172 +1,135 @@
 import sqlite3
 import pandas as pd
-import yaml
+import sys
+from pathlib import Path
 
-DB_PATH = "db/nifty100.db"
-CONFIG_PATH = "config/screener_config.yaml"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-with open(CONFIG_PATH, "r") as file:
-    config = yaml.safe_load(file)
+sys.path.insert(0, str(PROJECT_ROOT))
+from src.screener.presets import (
+    quality_compounder,
+    value_pick,
+    growth_accelerator,
+    dividend_champion,
+    debt_free_bluechip,
+    turnaround_watch,
+    summary
+)
 
-    conn = sqlite3.connect(DB_PATH)
+DB = "db/nifty100.db"
 
-    financial = pd.read_sql(
+conn = sqlite3.connect(DB)
+
+df = pd.read_sql(
+
     "SELECT * FROM financial_ratios",
+
     conn
+
 )
 
-market = pd.read_sql(
-    "SELECT * FROM market_cap",
-    conn
-)
+print(df.shape)
 
-sector = pd.read_sql(
-    "SELECT * FROM sectors",
-    conn
-)
+quality = quality_compounder(df)
 
-df = (
-    financial
-    .merge(
-        market,
-        on=["company_id","year"],
-        how="left"
+value = value_pick(df)
+
+growth = growth_accelerator(df)
+
+dividend = dividend_champion(df)
+
+bluechip = debt_free_bluechip(df)
+
+turnaround = turnaround_watch(df)
+
+
+
+print("="*60)
+
+print("Quality Compounder :", len(quality))
+
+print("Value Pick :", len(value))
+
+print("Growth Accelerator :", len(growth))
+
+print("Dividend Champion :", len(dividend))
+
+print("Debt Free Bluechip :", len(bluechip))
+
+print("Turnaround Watch :", len(turnaround))
+
+OUTPUT = "output/screener_output.xlsx"
+
+with pd.ExcelWriter(
+
+    OUTPUT,
+
+    engine="openpyxl"
+
+) as writer:
+
+    quality.to_excel(
+
+        writer,
+
+        sheet_name="Quality Compounder",
+
+        index=False
+
     )
-    .merge(
-        sector,
-        on="company_id",
-        how="left"
+
+    value.to_excel(
+
+        writer,
+
+        sheet_name="Value Pick",
+
+        index=False
+
     )
-)
 
-df["composite_quality_score"] = (
+    growth.to_excel(
 
-    df["return_on_equity_pct"].fillna(0)
+        writer,
 
-    +
+        sheet_name="Growth Accelerator",
 
-    df["net_profit_margin_pct"].fillna(0)
+        index=False
 
-    +
+    )
 
-    df["revenue_cagr_5yr"].fillna(0)
+    dividend.to_excel(
 
-) / 3
+        writer,
 
+        sheet_name="Dividend Champion",
 
-financial_sector = [
+        index=False
 
-    "Banks",
+    )
 
-    "Financial Services",
+    bluechip.to_excel(
 
-    "Insurance",
+        writer,
 
-    "NBFC"
+        sheet_name="Debt Free Bluechip",
 
-]
+        index=False
 
-df = df[
-    df.return_on_equity_pct >= config["roe_min"]
-]
+    )
 
-mask = (
+    turnaround.to_excel(
 
-    (df.broad_sector.isin(financial_sector))
+        writer,
 
-    |
+        sheet_name="Turnaround Watch",
 
-    (df.debt_to_equity <= config["de_max"])
+        index=False
 
-)
-
-df = df[mask]
-
-df = df[
-    df.free_cash_flow_cr >= config["fcf_min"]
-]
-
-
-df = df[
-    df.revenue_cagr_5yr >=
-    config["revenue_cagr_5yr_min"]
-]
-
-df = df[
-    df.operating_profit_margin_pct >=
-    config["opm_min"]
-]
-
-df = df[
-    df.pe_ratio <=
-    config["pe_max"]
-]
-
-df = df[
-    df.pb_ratio <=
-    config["pb_max"]
-]
-
-df = df[
-    df.dividend_yield_pct >=
-    config["dividend_yield_min"]
-]
-
-df["interest_coverage"] = (
-    df["interest_coverage"]
-    .fillna(float("inf"))
-)
-
-df = df[
-    df.interest_coverage >=
-    config["interest_coverage_min"]
-]
-
-df = df[
-    df.market_cap_crore >=
-    config["market_cap_min"]
-]
-
-df = df[
-    df.asset_turnover >=
-    config["asset_turnover_min"]
-]
-
-
-profit = pd.read_sql(
-    "SELECT company_id,year,sales,net_profit FROM profit_loss",
-    conn
-)
-
-df = df.merge(
-    profit,
-    on=["company_id","year"],
-    how="left"
-)
-
-df = df[
-    df.sales >= config["sales_min"]
-]
-
-df = df[
-    df.net_profit >= config["net_profit_min"]
-]
-
-df = df.sort_values(
-    "composite_quality_score",
-    ascending=False
-)
-
-print("="*70)
-
-print("Financial Screener")
-
-print("="*70)
-
-print(df.head(20))
+    )
 
 print()
 
-print("Companies Found :",len(df))
+print("Excel Generated Successfully")
 
 conn.close()
