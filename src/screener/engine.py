@@ -1,11 +1,19 @@
-import sqlite3
-import pandas as pd
 import sys
 from pathlib import Path
+import sqlite3
+import pandas as pd
+
+# --------------------------------------------------
+# Project Root
+# --------------------------------------------------
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
 sys.path.insert(0, str(PROJECT_ROOT))
+
+# --------------------------------------------------
+# Imports
+# --------------------------------------------------
+
 from src.screener.presets import (
     quality_compounder,
     value_pick,
@@ -16,19 +24,65 @@ from src.screener.presets import (
     summary
 )
 
-DB = "db/nifty100.db"
+from src.screener.scoring import calculate_scores
+from src.screener.export import export_screener
+
+# --------------------------------------------------
+# Database
+# --------------------------------------------------
+
+DB = PROJECT_ROOT / "db" / "nifty100.db"
 
 conn = sqlite3.connect(DB)
 
+print("=" * 80)
+print("DAY 17 - STOCK SCREENER")
+print("=" * 80)
+
+# --------------------------------------------------
+# Load Data
+# --------------------------------------------------
+
 df = pd.read_sql(
-
     "SELECT * FROM financial_ratios",
-
     conn
-
 )
 
-print(df.shape)
+print("\nRows Loaded :", len(df))
+print("Columns :", len(df.columns))
+
+# --------------------------------------------------
+# Calculate Composite Scores
+# --------------------------------------------------
+
+print("\nCalculating Composite Scores...")
+
+df = calculate_scores(df)
+
+print("Completed")
+
+print("\nTop Composite Scores")
+
+print(
+    df[
+        [
+            "company_id",
+            "year",
+            "composite_quality_score"
+        ]
+    ]
+    .sort_values(
+        "composite_quality_score",
+        ascending=False
+    )
+    .head(10)
+)
+
+# --------------------------------------------------
+# Run Presets
+# --------------------------------------------------
+
+print("\nRunning Preset Screeners...\n")
 
 quality = quality_compounder(df)
 
@@ -42,94 +96,118 @@ bluechip = debt_free_bluechip(df)
 
 turnaround = turnaround_watch(df)
 
+# --------------------------------------------------
+# Top 50 Only
+# --------------------------------------------------
 
+quality = quality.head(50)
 
-print("="*60)
+value = value.head(50)
 
-print("Quality Compounder :", len(quality))
+growth = growth.head(50)
 
-print("Value Pick :", len(value))
+dividend = dividend.head(50)
 
-print("Growth Accelerator :", len(growth))
+bluechip = bluechip.head(50)
 
-print("Dividend Champion :", len(dividend))
+turnaround = turnaround.head(50)
 
-print("Debt Free Bluechip :", len(bluechip))
+# --------------------------------------------------
+# Summary
+# --------------------------------------------------
 
-print("Turnaround Watch :", len(turnaround))
+results = {
 
-OUTPUT = "output/screener_output.xlsx"
+    "Quality Compounder": quality,
 
-with pd.ExcelWriter(
+    "Value Pick": value,
 
-    OUTPUT,
+    "Growth Accelerator": growth,
 
-    engine="openpyxl"
+    "Dividend Champion": dividend,
 
-) as writer:
+    "Debt Free Blue Chip": bluechip,
 
-    quality.to_excel(
+    "Turnaround Watch": turnaround
 
-        writer,
+}
 
-        sheet_name="Quality Compounder",
+summary(results)
 
-        index=False
+# --------------------------------------------------
+# Export
+# --------------------------------------------------
 
-    )
+# --------------------------------------------------
+# Export Results
+# --------------------------------------------------
 
-    value.to_excel(
+OUTPUT = PROJECT_ROOT / "output" / "screener_output.xlsx"
 
-        writer,
+print("\nExporting Excel Report...")
 
-        sheet_name="Value Pick",
+export_screener(
+    results,
+    OUTPUT
+)
 
-        index=False
-
-    )
-
-    growth.to_excel(
-
-        writer,
-
-        sheet_name="Growth Accelerator",
-
-        index=False
-
-    )
-
-    dividend.to_excel(
-
-        writer,
-
-        sheet_name="Dividend Champion",
-
-        index=False
-
-    )
-
-    bluechip.to_excel(
-
-        writer,
-
-        sheet_name="Debt Free Bluechip",
-
-        index=False
-
-    )
-
-    turnaround.to_excel(
-
-        writer,
-
-        sheet_name="Turnaround Watch",
-
-        index=False
-
-    )
+print("Excel Export Completed")
 
 print()
 
-print("Excel Generated Successfully")
+print("=" * 80)
+print("DAY 17 COMPLETED")
+print("=" * 80)
+
+print()
+
+print("Output File")
+print(OUTPUT)
+
+print()
+
+print("Summary")
+
+print(f"Quality Compounder : {len(quality)}")
+
+print(f"Value Pick         : {len(value)}")
+
+print(f"Growth Accelerator : {len(growth)}")
+
+print(f"Dividend Champion  : {len(dividend)}")
+
+print(f"Debt Free Bluechip : {len(bluechip)}")
+
+print(f"Turnaround Watch   : {len(turnaround)}")
+
+print()
+
+print("Top 5 Companies")
+
+print(
+
+    df[
+
+        [
+
+            "company_id",
+
+            "composite_quality_score"
+
+        ]
+
+    ]
+
+    .sort_values(
+
+        "composite_quality_score",
+
+        ascending=False
+
+    )
+
+    .head()
+
+)
 
 conn.close()
