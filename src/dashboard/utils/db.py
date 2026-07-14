@@ -256,27 +256,27 @@ def get_screener_data():
     conn = get_connection()
 
     query = """
-
     SELECT
-
-        f.*,
-
+        fr.company_id,
         c.company_name,
-
         s.broad_sector,
-
-        s.sub_sector
-
-    FROM financial_ratios f
-
+        fr.return_on_equity_pct,
+        fr.debt_to_equity,
+        fr.free_cash_flow_cr,
+        fr.revenue_cagr_5yr,
+        fr.pat_cagr_5yr,
+        fr.operating_profit_margin_pct,
+        fr.pe_ratio,
+        fr.pb_ratio,
+        fr.dividend_yield_pct,
+        fr.interest_coverage,
+        fr.composite_quality_score
+    FROM financial_ratios fr
     LEFT JOIN companies c
-
-        ON f.company_id=c.company_id
-
+        ON fr.company_id = c.company_id
     LEFT JOIN sectors s
-
-        ON f.company_id=s.company_id
-
+        ON fr.company_id = s.company_id
+    WHERE fr.year LIKE '%2024%'
     """
 
     df = pd.read_sql(query, conn)
@@ -327,6 +327,83 @@ def get_pl(ticker):
     get_pl,
     get_pros_cons,
 )
+    
+
+@st.cache_data(ttl=600)
+def get_peer_groups():
+    conn = get_connection()
+
+    query = """
+    SELECT DISTINCT peer_group_name
+    FROM peer_groups
+    ORDER BY peer_group_name
+    """
+
+    df = pd.read_sql(query, conn)
+    conn.close()
+    return df
+
+@st.cache_data(ttl=600)
+def get_peer_companies(group):
+
+    conn = get_connection()
+
+    query = f"""
+    SELECT
+        p.company_id,
+        c.company_name,
+        p.peer_group_name,
+        p.is_benchmark
+    FROM peer_groups p
+    LEFT JOIN companies c
+        ON p.company_id=c.company_id
+    WHERE p.peer_group_name='{group}'
+    ORDER BY c.company_name
+    """
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+@st.cache_data(ttl=600)
+def get_peer_metrics(group):
+
+    conn = get_connection()
+
+    query=f"""
+    SELECT
+        p.company_id,
+        c.company_name,
+        p.peer_group_name,
+        p.is_benchmark,
+
+        r.return_on_equity_pct,
+        r.return_on_capital_employed_pct,
+        r.net_profit_margin_pct,
+        r.debt_to_equity,
+        r.free_cash_flow_cr,
+        r.revenue_cagr_5yr,
+        r.pat_cagr_5yr,
+        r.composite_quality_score
+
+    FROM peer_groups p
+
+    LEFT JOIN financial_ratios r
+        ON p.company_id=r.company_id
+
+    LEFT JOIN companies c
+        ON c.company_id=p.company_id
+
+    WHERE p.peer_group_name='{group}'
+    """
+
+    df=pd.read_sql(query,conn)
+
+    conn.close()
+
+    return df
 # ==========================================================
 # Test
 # ==========================================================

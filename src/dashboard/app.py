@@ -26,7 +26,7 @@ st.set_page_config(
 # ==========================================================
 
 try:
-    from pages import (
+    from screens import (
         home,
         profile,
         screener,
