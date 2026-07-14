@@ -17,9 +17,8 @@ if str(CURRENT_DIR) not in sys.path:
 
 st.set_page_config(
     page_title="Nifty 100 Analytics",
-    page_icon="📈",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="expanded"
 )
 
 # ==========================================================
@@ -89,18 +88,6 @@ except Exception as e:
 
     st.exception(e)
 
-# ==========================================================
-# LOAD PAGE
-# ==========================================================
-
-selected_page = PAGES[page]
-
-if hasattr(selected_page, "render"):
-    selected_page.render()
-else:
-    st.error(
-        f"{selected_page.__name__} does not contain a render() function."
-    )
 
 # ==========================================================
 # FOOTER

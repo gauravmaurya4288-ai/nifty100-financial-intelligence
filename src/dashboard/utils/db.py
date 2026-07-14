@@ -285,6 +285,48 @@ def get_screener_data():
 
     return df
 
+@st.cache_data(ttl=600)
+def get_pl(ticker):
+
+    conn = get_connection()
+
+    df = pd.read_sql(
+        "SELECT * FROM profit_loss WHERE company_id=?",
+        conn,
+        params=(ticker,)
+    )
+
+    conn.close()
+
+    return df
+
+    @st.cache_data(ttl=600)
+    def get_pros_cons(ticker):
+
+        conn = get_connection()
+
+        query = """
+        SELECT *
+        FROM pros_cons
+        WHERE company_id = ?
+        """
+
+        df = pd.read_sql(
+            query,
+            conn,
+            params=(ticker,)
+        )
+
+        conn.close()
+
+        return df
+    
+    from utils.db import (
+    get_companies,
+    get_ratios,
+    get_pl,
+    get_pros_cons,
+)
 # ==========================================================
 # Test
 # ==========================================================
