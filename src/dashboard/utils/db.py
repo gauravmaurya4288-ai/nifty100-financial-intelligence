@@ -404,6 +404,123 @@ def get_peer_metrics(group):
     conn.close()
 
     return df
+
+
+@st.cache_data(ttl=600)
+def get_company_history(company_id):
+
+    conn = get_connection()
+
+    query = """
+    SELECT *
+    FROM financial_ratios
+    WHERE company_id=?
+    ORDER BY year
+    """
+
+    df = pd.read_sql(
+        query,
+        conn,
+        params=(company_id,)
+    )
+
+    conn.close()
+
+    return df
+
+@st.cache_data(ttl=600)
+def get_sector_analysis():
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+
+        c.company_id,
+        c.company_name,
+
+        s.broad_sector,
+        s.sub_sector,
+
+        fr.market_cap_crore,
+        fr.return_on_equity_pct,
+        fr.return_on_capital_employed_pct,
+        fr.net_profit_margin_pct,
+        fr.revenue_cagr_5yr,
+        fr.composite_quality_score
+
+    FROM financial_ratios fr
+
+    LEFT JOIN companies c
+        ON fr.company_id=c.company_id
+
+    LEFT JOIN sectors s
+        ON fr.company_id=s.company_id
+
+    WHERE fr.year LIKE '%2024%'
+    """
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+@st.cache_data(ttl=600)
+def get_capital_allocation():
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+
+        c.company_id,
+        c.company_name,
+
+        s.broad_sector,
+
+        fr.market_cap_crore,
+        fr.free_cash_flow_cr,
+        fr.capital_allocation_pattern,
+        fr.fcf_conversion_pct,
+        fr.capex_intensity_pct,
+        fr.composite_quality_score
+
+    FROM financial_ratios fr
+
+    LEFT JOIN companies c
+        ON fr.company_id = c.company_id
+
+    LEFT JOIN sectors s
+        ON fr.company_id = s.company_id
+
+    WHERE fr.year LIKE '%2024%'
+    """
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+
+@st.cache_data(ttl=600)
+def get_annual_reports():
+
+    conn = get_connection()
+
+    df = pd.read_sql(
+        """
+        SELECT *
+        FROM annual_reports
+        ORDER BY company_id, year DESC
+        """,
+        conn
+    )
+
+    conn.close()
+
+    return df
 # ==========================================================
 # Test
 # ==========================================================
