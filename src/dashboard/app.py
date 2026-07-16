@@ -6,7 +6,7 @@ import streamlit as st
 # PROJECT PATH
 # ==========================================================
 
-CURRENT_DIR = Path(__file__).parent
+CURRENT_DIR = Path(__file__).resolve().parent
 
 if str(CURRENT_DIR) not in sys.path:
     sys.path.insert(0, str(CURRENT_DIR))
@@ -16,16 +16,65 @@ if str(CURRENT_DIR) not in sys.path:
 # ==========================================================
 
 st.set_page_config(
-    page_title="Nifty 100 Analytics",
+    page_title="Nifty100 Analytics",
+    page_icon="📈",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
 )
+
+# ==========================================================
+# CUSTOM CSS
+# ==========================================================
+
+st.markdown("""
+<style>
+
+/* Reduce page padding */
+.block-container{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-left:2rem;
+    padding-right:2rem;
+}
+
+/* Metric Card */
+div[data-testid="stMetric"]{
+    background-color:#1f2937;
+    border:1px solid #374151;
+    border-radius:12px;
+    padding:16px;
+}
+
+/* Metric Label */
+div[data-testid="stMetricLabel"]{
+    font-size:15px;
+    font-weight:600;
+}
+
+/* Metric Value */
+div[data-testid="stMetricValue"]{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"]{
+    border-right:1px solid #2d3748;
+}
+
+footer{
+    visibility:hidden;
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 # ==========================================================
 # IMPORT PAGES
 # ==========================================================
 
 try:
+
     from screens import (
         home,
         profile,
@@ -36,7 +85,9 @@ try:
         capital,
         reports,
     )
+
 except Exception as e:
+
     st.error(f"Error importing dashboard pages:\n\n{e}")
     st.stop()
 
@@ -47,37 +98,45 @@ except Exception as e:
 st.sidebar.title("📈 Nifty100 Analytics")
 
 page = st.sidebar.radio(
+
     "Navigation",
+
     [
         "🏠 Home",
         "🏢 Company Profile",
         "🔍 Screener",
         "🤝 Peer Comparison",
-        "📊 Trend Analysis",
+        "📈 Trend Analysis",
         "🏭 Sector Analysis",
         "💰 Capital Allocation",
         "📄 Annual Reports",
     ],
+
+    key="main_navigation",
+
 )
 
-st.sidebar.markdown("---")
-st.sidebar.success("Sprint 4 Dashboard")
-st.sidebar.caption("Version 1.0")
+st.sidebar.divider()
 
+st.sidebar.success("Sprint 4 Dashboard")
+
+st.sidebar.caption("Version 1.0")
 
 # ==========================================================
 # PAGE ROUTER
 # ==========================================================
 
 PAGES = {
+
     "🏠 Home": home,
     "🏢 Company Profile": profile,
     "🔍 Screener": screener,
     "🤝 Peer Comparison": peers,
-    "📊 Trend Analysis": trends,
+    "📈 Trend Analysis": trends,
     "🏭 Sector Analysis": sectors,
     "💰 Capital Allocation": capital,
     "📄 Annual Reports": reports,
+
 }
 
 try:
@@ -88,26 +147,3 @@ except Exception as e:
 
     st.exception(e)
 
-
-# ==========================================================
-# FOOTER
-# ==========================================================
-
-st.divider()
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.metric("Sprint", "4")
-
-with col2:
-    st.metric("Dashboard Screens", "8")
-
-with col3:
-    st.metric("Database", "SQLite")
-
-st.divider()
-
-st.caption(
-    "Nifty100 Financial Intelligence Platform | Sprint 4 | Day 22"
-)

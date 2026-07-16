@@ -8,215 +8,299 @@ from utils.db import (
     get_sectors,
 )
 
+
+# ==========================================================
+# Helper
+# ==========================================================
+
+def safe_metric(value, suffix=""):
+
+    if pd.isna(value):
+        return "N/A"
+
+    return f"{value:.2f}{suffix}"
+
+
+# ==========================================================
+# Render
+# ==========================================================
+
 def render():
 
     st.title("🏠 Nifty100 Dashboard")
 
-    st.markdown(
-        "### Financial Intelligence Overview"
+    st.markdown("## Financial Intelligence Overview")
+
+    with st.spinner("Loading dashboard..."):
+
+        companies = get_companies()
+        ratios = get_ratios()
+        sectors = get_sectors()
+
+    if ratios.empty:
+
+        st.error("No financial data available.")
+
+        return
+
+    # ======================================================
+    # Year Filter
+    # ======================================================
+
+    years = sorted(
+
+        ratios["year"].astype(str).unique(),
+
+        reverse=True
+
     )
-
-    # ============================================
-    # LOAD DATA
-    # ============================================
-
-    companies = get_companies()
-
-    ratios = get_ratios()
-
-    sectors = get_sectors()
-
-    # ============================================
-    # YEAR FILTER
-    # ============================================
-
-    years = [
-
-        "2019",
-        "2020",
-        "2021",
-        "2022",
-        "2023",
-        "2024"
-
-    ]
 
     year = st.sidebar.selectbox(
-    "Financial Year",
-    years,
-    index=len(years) - 1,
-    key="home_year_selector"
-    )
 
-    # ============================================
-    # FILTER
-    # ============================================
+        "Financial Year",
+
+        years,
+
+        key="home_year"
+
+    )
 
     latest = ratios[
         ratios["year"].astype(str).str.contains(year)
     ].copy()
 
-    st.caption(
+    st.caption(f"Showing Dashboard for {year}")
 
-        f"Showing Dashboard for {year}"
+    if latest.empty:
 
-    )
+        st.warning("No records found.")
 
-    # ============================================
+        return
+
+    # ======================================================
     # KPIs
-    # ============================================
+    # ======================================================
 
     c1, c2, c3, c4, c5, c6 = st.columns(6)
 
     c1.metric(
-
         "Companies",
-
         latest["company_id"].nunique()
-
     )
 
     c2.metric(
-
         "Average ROE",
-
-        f"{latest['return_on_equity_pct'].mean():.2f}%"
-
+        safe_metric(
+            latest["return_on_equity_pct"].mean(),
+            "%"
+        )
     )
 
     c3.metric(
-
         "Median P/E",
-
-        f"{latest['pe_ratio'].median():.2f}"
-
+        safe_metric(
+            latest["pe_ratio"].median()
+        )
     )
 
     c4.metric(
-
         "Median D/E",
-
-        f"{latest['debt_to_equity'].median():.2f}"
-
+        safe_metric(
+            latest["debt_to_equity"].median()
+        )
     )
 
     c5.metric(
-
         "Revenue CAGR",
+        safe_metric(
+            latest["revenue_cagr_5yr"].median(),
+            "%"
+        )
+    )
 
-        f"{latest['revenue_cagr_5yr'].median():.2f}%"
+    debt_free = latest[
+        latest["debt_to_equity"] <= 0.5
+    ]["company_id"].nunique()
+
+    c6.metric(
+        "Debt Free",
+        debt_free
+    )
+
+    st.divider()
+
+    # ======================================================
+    # Sector Distribution
+    # ======================================================
+
+    st.subheader("🏢 Sector Distribution")
+
+    sector_df = sectors.copy()
+
+    if "broad_sector" not in sector_df.columns:
+
+        st.warning("Sector information unavailable.")
+
+    else:
+
+        sector_summary = (
+
+            sector_df
+
+            .groupby("broad_sector")
+
+            .size()
+
+            .reset_index(name="Companies")
+
+            .sort_values(
+
+                "Companies",
+
+                ascending=False
+
+            )
+
+        )
+
+        fig = px.pie(
+
+            sector_summary,
+
+            names="broad_sector",
+
+            values="Companies",
+
+            hole=0.55,
+
+            title="Companies by Broad Sector"
+
+        )
+
+        fig.update_traces(
+
+            textposition="inside",
+
+            textinfo="percent+label"
+
+        )
+
+        fig.update_layout(
+
+            height=520,
+
+            margin=dict(
+
+                l=20,
+
+                r=20,
+
+                t=50,
+
+                b=20
+
+            )
+
+        )
+
+        st.plotly_chart(
+
+            fig,
+
+            use_container_width=True
+
+        )
+
+    st.divider()
+
+    # ======================================================
+    # Top Companies
+    # ======================================================
+
+    st.subheader("🏆 Top 5 Companies by Composite Quality Score")
+
+    top = (
+
+        latest
+
+        .sort_values(
+
+            "composite_quality_score",
+
+            ascending=False
+
+        )
+
+        .head(5)
 
     )
 
-    debt_free = (
+    st.dataframe(
 
-        latest["debt_to_equity"] < 0.5
+        top[
 
-    ).sum()
+            [
 
-    c6.metric(
+                "company_id",
 
-        "Debt Free",
+                "composite_quality_score",
 
-        debt_free
+                "return_on_equity_pct",
+
+                "pe_ratio",
+
+                "debt_to_equity",
+
+            ]
+
+        ],
+
+        use_container_width=True,
+
+        hide_index=True,
 
     )
 
     st.divider()
 
-    # ==========================================================
-    # SECTOR ANALYSIS
-    # ==========================================================
+    # ======================================================
+    # Sector Summary
+    # ======================================================
 
-    st.subheader("🏢 Sector Distribution")
+    st.subheader("📊 Sector Summary")
 
-    # Merge latest financial data with sector master
-    sector_data = latest.merge(
-        sectors[["company_id", "broad_sector"]],
-        on="company_id",
-        how="left"
-    )
+    if not sectors.empty:
 
-    # Replace missing sectors
-    sector_data["broad_sector"] = (
-        sector_data["broad_sector"]
-        .fillna("Unknown")
-    )
+        summary = (
 
-    # Create summary
-    sector_summary = (
-        sector_data.groupby("broad_sector", dropna=False)
-        .agg(Companies=("company_id", "nunique"))
-        .reset_index()
-        .sort_values("Companies", ascending=False)
-    )
+            sectors
 
-    # Debug (remove later)
-    with st.expander("Debug"):
-        st.write("Latest Shape:", latest.shape)
-        st.write("Sector Shape:", sectors.shape)
-        st.write("Merged Shape:", sector_data.shape)
-        st.dataframe(sector_summary)
+            .groupby("broad_sector")
 
-    # Draw chart only if data exists
-    if len(sector_summary) > 0:
+            .size()
 
-        fig = px.pie(
-            sector_summary,
-            names="broad_sector",
-            values="Companies",
-            hole=0.45,
-            title="Companies by Broad Sector",
+            .reset_index(name="Companies")
+
+            .sort_values(
+
+                "Companies",
+
+                ascending=False
+
+            )
+
         )
 
-        fig.update_traces(textposition="inside", textinfo="percent+label")
+        st.dataframe(
 
-        fig.update_layout(
-            height=550,
-            showlegend=True,
-            margin=dict(l=20, r=20, t=60, b=20)
+            summary,
+
+            use_container_width=True,
+
+            hide_index=True,
+
         )
-
-        st.plotly_chart(fig, use_container_width=True)
 
     else:
-        st.warning("No sector data available.")
 
-    
-
-    # ============================================
-    # TOP COMPANIES
-    # ============================================
-
-    st.subheader("Top 5 Companies by Composite Quality Score")
-
-    top = (
-        latest
-        .sort_values(
-            "composite_quality_score",
-            ascending=False
-        )
-        .head(5)
-    )
-
-    st.dataframe(
-        top[
-            [
-                "company_id",
-                "composite_quality_score",
-                "return_on_equity_pct",
-                "pe_ratio",
-                "debt_to_equity"
-            ]
-        ],
-        use_container_width=True,
-        hide_index=True
-    )
-
-    st.subheader("Sector Summary")
-
-    st.dataframe(
-        sector_summary,
-        use_container_width=True,
-        hide_index=True
-    )
+        st.info("Sector data unavailable.")
