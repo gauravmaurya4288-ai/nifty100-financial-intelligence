@@ -16,8 +16,8 @@ if str(CURRENT_DIR) not in sys.path:
 # ==========================================================
 
 st.set_page_config(
-    page_title="Nifty100 Analytics",
-    page_icon="📈",
+    page_title="Nifty100 Financial Intelligence",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -26,10 +26,11 @@ st.set_page_config(
 # CUSTOM CSS
 # ==========================================================
 
-st.markdown("""
+st.markdown(
+    """
 <style>
 
-/* Reduce page padding */
+/* Main Layout */
 .block-container{
     padding-top:1rem;
     padding-bottom:1rem;
@@ -37,40 +38,31 @@ st.markdown("""
     padding-right:2rem;
 }
 
-/* Metric Card */
+/* Metric Cards */
 div[data-testid="stMetric"]{
-    background-color:#1f2937;
+    background:#1f2937;
     border:1px solid #374151;
     border-radius:12px;
     padding:16px;
 }
 
-/* Metric Label */
-div[data-testid="stMetricLabel"]{
-    font-size:15px;
-    font-weight:600;
-}
-
-/* Metric Value */
-div[data-testid="stMetricValue"]{
-    font-size:32px;
-    font-weight:bold;
-}
-
 /* Sidebar */
 section[data-testid="stSidebar"]{
-    border-right:1px solid #2d3748;
+    border-right:1px solid #374151;
 }
 
+/* Hide Footer */
 footer{
     visibility:hidden;
 }
 
 </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 # ==========================================================
-# IMPORT PAGES
+# IMPORT SCREENS
 # ==========================================================
 
 try:
@@ -84,23 +76,30 @@ try:
         sectors,
         capital,
         reports,
+        rankings,
+        portfolio,
     )
 
 except Exception as e:
 
-    st.error(f"Error importing dashboard pages:\n\n{e}")
+    st.error(f"Failed to import dashboard pages.\n\n{e}")
     st.stop()
 
 # ==========================================================
 # SIDEBAR
 # ==========================================================
 
-st.sidebar.title("📈 Nifty100 Analytics")
+st.sidebar.image(
+    "https://img.icons8.com/color/96/stocks-growth.png",
+    width=70,
+)
+
+st.sidebar.title("Nifty100")
+
+st.sidebar.caption("Financial Intelligence Dashboard")
 
 page = st.sidebar.radio(
-
     "Navigation",
-
     [
         "🏠 Home",
         "🏢 Company Profile",
@@ -110,40 +109,58 @@ page = st.sidebar.radio(
         "🏭 Sector Analysis",
         "💰 Capital Allocation",
         "📄 Annual Reports",
+        "🏆 Rankings",
+        "💼 Portfolio Simulator",
     ],
-
-    key="main_navigation",
-
 )
 
 st.sidebar.divider()
 
-st.sidebar.success("Sprint 4 Dashboard")
+st.sidebar.success("Sprint 4")
 
-st.sidebar.caption("Version 1.0")
+st.sidebar.info("Version 2.0")
 
 # ==========================================================
-# PAGE ROUTER
+# PAGE REGISTRY
 # ==========================================================
 
 PAGES = {
 
     "🏠 Home": home,
+
     "🏢 Company Profile": profile,
+
     "🔍 Screener": screener,
+
     "🤝 Peer Comparison": peers,
+
     "📈 Trend Analysis": trends,
+
     "🏭 Sector Analysis": sectors,
+
     "💰 Capital Allocation": capital,
+
     "📄 Annual Reports": reports,
+
+    "🏆 Rankings": rankings,
+
+    "💼 Portfolio Simulator": portfolio,
 
 }
 
+# ==========================================================
+# ROUTER
+# ==========================================================
+
 try:
 
-    PAGES[page].render()
+    selected_page = PAGES.get(page)
+
+    if selected_page is None:
+        st.error("Page not found.")
+    else:
+        selected_page.render()
 
 except Exception as e:
 
     st.exception(e)
-

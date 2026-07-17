@@ -15,11 +15,7 @@ OUTPUT = BASE_DIR / "output"
 
 OUTPUT.mkdir(exist_ok=True)
 
-print("=" * 80)
-print("DAY 26 - VALUATION ENGINE")
-print("=" * 80)
 
-print("\nLoading Tables...\n")
 
 conn = sqlite3.connect(DB)
 
@@ -243,41 +239,9 @@ print("\nTop Valuation Records")
 print("\nColumns in valuation:")
 print(valuation.columns.tolist())
 
-
-print(
-
-    valuation[
-        [
-            "company_id",
-            "broad_sector",
-            "pe_ratio",
-            "sector_median_pe",
-            "pe_vs_sector_pct",
-            "fcf_yield_pct",
-            "flag"
-        ]
-    ].head(15)
-
-)
-
-print("\n" + "=" * 80)
-print("FLAG DISTRIBUTION BY SECTOR")
-print("=" * 80)
-
-summary = pd.crosstab(
-    valuation["broad_sector"],
-    valuation["flag"]
-)
-
-print(summary)
-
 # =============================================================================
-# EXPORT REPORTS
+# CREATE SUMMARY DATAFRAME
 # =============================================================================
-
-print("\n" + "=" * 80)
-print("GENERATING REPORTS")
-print("=" * 80)
 
 summary = valuation[
     [
@@ -299,52 +263,74 @@ summary.rename(
         "broad_sector": "sector",
         "pe_ratio": "pe",
         "pb_ratio": "pb",
-        "ev_ebitda": "ev_ebitda",
-        "fcf_yield_pct": "fcf_yield_pct",
-        "sector_median_pe": "sector_median_pe",
-        "pe_vs_sector_pct": "pe_vs_sector_pct",
     },
     inplace=True,
 )
 
-excel_file = OUTPUT / "valuation_summary.xlsx"
+# =============================================================================
+# GENERATE VALUATION SUMMARY
+# =============================================================================
 
-summary.to_excel(
-    excel_file,
-    index=False
-)
+def generate_valuation_summary():
+    """
+    Return the valuation summary DataFrame.
+    """
+    return summary.copy()
 
-print(f"\nExcel Generated : {excel_file}")
 
-flags = summary[
-    summary["flag"].isin(
-        ["Discount", "Caution"]
+# =============================================================================
+# EXPORT REPORTS
+# =============================================================================
+
+def export_reports(summary_df):
+    """
+    Export valuation reports to Excel and CSV.
+    """
+
+    excel_file = OUTPUT / "valuation_summary.xlsx"
+
+    summary_df.to_excel(
+        excel_file,
+        index=False
     )
-].copy()
 
-csv_file = OUTPUT / "valuation_flags.csv"
+    print(f"\nExcel Generated : {excel_file}")
 
-flags.to_csv(
-    csv_file,
-    index=False
-)
+    flags = summary_df[
+        summary_df["flag"].isin(
+            ["Discount", "Caution"]
+        )
+    ].copy()
 
-print(f"CSV Generated   : {csv_file}")
+    csv_file = OUTPUT / "valuation_flags.csv"
+
+    flags.to_csv(
+        csv_file,
+        index=False
+    )
+
+    print(f"CSV Generated   : {csv_file}")
+
+    print("\n" + "=" * 80)
+    print("DAY 26 COMPLETED")
+    print("=" * 80)
+
+    print("\nTotal Companies :", len(summary_df))
+    print("Flagged Companies :", len(flags))
+
+    print("\nFlag Distribution")
+    print(summary_df["flag"].value_counts())
+
+    print("\nReports Location")
+    print(OUTPUT)
 
 
-print("\n" + "=" * 80)
-print("DAY 26 COMPLETED")
-print("=" * 80)
+# =============================================================================
+# MAIN
+# =============================================================================
 
-print("\nTotal Companies :", len(summary))
-print("Flagged Companies :", len(flags))
+if __name__ == "__main__":
 
-print("\nFlag Distribution")
-
-print(summary["flag"].value_counts())
-
-print("\nReports Location")
-print(OUTPUT)
-
+    export_reports(summary)
 
 conn.close()
