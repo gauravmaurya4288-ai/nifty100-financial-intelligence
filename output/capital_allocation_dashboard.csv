@@ -1,0 +1,118 @@
+company_id,company_name,capital_score,rating,reinvestment_ratio,reinvestment_category,dividend_policy,cash_utilization,debt_trend,leverage
+ABB,Abbott India Ltd,100,Excellent,81.86,Growth Focused,High Dividend,Healthy Capital Allocation,Stable Debt,Low
+ADANIENSOL,Adani Energy Solutions Ltd,63,Average,81.86,Growth Focused,No Dividend,Healthy Capital Allocation,Increasing Debt,Very High
+ADANIENT,Adani Enterprises Ltd,72,Good,181.99,Aggressive Expansion,Low Dividend,Expansion Using External Funding,Increasing Debt,High
+ADANIGREEN,Adani Green Energy Ltd,49,Weak,273.05,Aggressive Expansion,No Dividend,Expansion Using External Funding,Increasing Debt,Very High
+ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
+",100,Excellent,45.07,Balanced,Low Dividend,Healthy Capital Allocation,Deleveraging,Moderate
+ADANIPOWER,Adani Power Ltd,100,Excellent,24.57,Low Reinvestment,No Dividend,Asset Monetization,Deleveraging,Moderate
+AGTL,,38,Weak,78.74,Growth Focused,Unknown,Healthy Capital Allocation,Unknown,Unknown
+AMBUJACEM,Ambuja Cements Ltd,100,Excellent,158.36,Aggressive Expansion,Low Dividend,Expansion Using External Funding,Increasing Debt,Low
+APOLLOHOSP,"Apollo Hospitals
+Chain of Indian private hospitals",100,Excellent,80.05,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+ASIANPAINT,"Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company",100,Excellent,41.74,Balanced,High Dividend,Healthy Capital Allocation,Stable Debt,Low
+AXISBANK,Axis Bank Ltd,45,Weak,162.03,Aggressive Expansion,Low Dividend,Financial Stress,Increasing Debt,Very High
+BAJAJ-AUTO,Bajaj Auto Ltd,100,Excellent,1.1,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Stable Debt,Low
+BAJAJFINSV,Bajaj Finserv Ltd,43,Weak,15.96,Low Reinvestment,Low Dividend,Financial Stress,Increasing Debt,Very High
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,100,Excellent,24.32,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+BAJFINANCE,Bajaj Finance Ltd,43,Weak,9.86,Low Reinvestment,Low Dividend,Financial Stress,Increasing Debt,Very High
+BANKBARODA,Bank of Baroda,50,Weak,20.48,Low Reinvestment,Moderate Dividend,Financial Stress,Increasing Debt,Very High
+BEL,Bharat Electronics Ltd,100,Excellent,127.15,Aggressive Expansion,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+BHARTIARTL,Bharti Airtel Ltd,100,Excellent,64.75,Growth Focused,High Dividend,Healthy Capital Allocation,Deleveraging,Very High
+BHEL,"Bharat Heavy Electricals Limited
+",100,Excellent,35.85,Balanced,Moderate Dividend,Financial Stress,Increasing Debt,Low
+BOSCHLTD,Bosch Ltd,100,Excellent,22.59,Low Reinvestment,Moderate Dividend,Asset Monetization,Deleveraging,Low
+BPCL,Bharat Petroleum Corporation Ltd,100,Excellent,29.28,Balanced,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Moderate
+BRITANNIA,Britannia Industries Ltd,100,Excellent,18.54,Low Reinvestment,High Dividend,Asset Monetization,Deleveraging,Moderate
+CANBK,Canara Bank,63,Average,11.63,Low Reinvestment,Low Dividend,Healthy Capital Allocation,Increasing Debt,Very High
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,43,Weak,8.0,Low Reinvestment,Low Dividend,Financial Stress,Increasing Debt,Very High
+CIPLA,"Cipla Ltd
+",100,Excellent,72.13,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+COALINDIA,Coal India Ltd,100,Excellent,24.78,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+DABUR,Dabur India Ltd,100,Excellent,48.24,Balanced,High Dividend,Healthy Capital Allocation,Increasing Debt,Low
+DIVISLAB,Divis Laboratories Ltd,100,Excellent,21.33,Low Reinvestment,High Dividend,Healthy Capital Allocation,Deleveraging,Low
+DLF,DLF Ltd,100,Excellent,60.22,Growth Focused,Moderate Dividend,Expansion Using External Funding,Increasing Debt,Low
+DMART,Avenue Supermarts Ltd,100,Excellent,89.88,Growth Focused,No Dividend,Healthy Capital Allocation,Deleveraging,Low
+DRREDDY,Dr Reddys Laboratories Ltd,100,Excellent,88.8,Growth Focused,Low Dividend,Healthy Capital Allocation,Increasing Debt,Low
+EICHERMOT,Eicher Motors Ltd,100,Excellent,76.1,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+GAIL,GAIL (India) Ltd,100,Excellent,65.36,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+GODREJCP,Godrej Consumer Products Ltd,99,Excellent,165.94,Aggressive Expansion,Unknown,Expansion Using External Funding,Increasing Debt,Low
+GRASIM,Grasim Industries Ltd,60,Average,215.64,Aggressive Expansion,Low Dividend,Financial Stress,Increasing Debt,High
+HAL,Hindustan Aeronautics Ltd,100,Excellent,77.95,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+HAVELLS,Havells India Ltd,100,Excellent,82.85,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+HCLTECH,HCL Technologies Ltd,100,Excellent,29.44,Balanced,High Dividend,Healthy Capital Allocation,Increasing Debt,Low
+HDFCBANK,HDFC Bank Ltd,68,Average,87.05,Growth Focused,Moderate Dividend,Asset Monetization,Increasing Debt,Very High
+HDFCLIFE,HDFC Life Insurance Company Ltd,100,Excellent,126.98,Aggressive Expansion,Moderate Dividend,Healthy Capital Allocation,Stable Debt,Low
+HEROMOTOCO,"Hero MotoCorp Ltd
+",100,Excellent,37.13,Balanced,High Dividend,Healthy Capital Allocation,Increasing Debt,Low
+HINDALCO,Hindalco Industries Ltd,100,Excellent,59.31,Balanced,Low Dividend,Healthy Capital Allocation,Deleveraging,Moderate
+HINDUNILVR,"Hindustan Unilever Ltd
+",100,Excellent,34.42,Balanced,High Dividend,Healthy Capital Allocation,Increasing Debt,Low
+ICICIBANK,ICICI Bank Ltd,63,Average,92.02,Growth Focused,Low Dividend,Expansion Using External Funding,Increasing Debt,Very High
+ICICIGI,ICICI Lombard General Insurance Company Ltd,100,Excellent,79.81,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Stable Debt,Low
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,100,Excellent,101.44,Aggressive Expansion,Low Dividend,Mixed,Stable Debt,Low
+INDIGO,Interglobe Aviation Ltd,100,Excellent,55.51,Balanced,No Dividend,Healthy Capital Allocation,Increasing Debt,Low
+INDUSINDBK,IndusInd Bank Ltd,43,Weak,3.71,Low Reinvestment,Low Dividend,Mixed,Increasing Debt,Very High
+INFY,Infosys Ltd,100,Excellent,20.2,Low Reinvestment,Unknown,Healthy Capital Allocation,Increasing Debt,Low
+IOC,"Indian Oil Corporation
+",100,Excellent,44.25,Balanced,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Moderate
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,100,Excellent,24.38,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+IRFC,Indian Railway Finance Corporation Ltd,95,Excellent,0.1,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Very High
+ITC,"ITC Ltd
+",100,Excellent,9.1,Low Reinvestment,High Dividend,Asset Monetization,Deleveraging,Low
+JINDALSTEL,Jindal Steel & Power Ltd,100,Excellent,138.88,Aggressive Expansion,Low Dividend,Expansion Using External Funding,Increasing Debt,Low
+JIOFIN,Jio Financial Services Ltd,100,Excellent,212.54,Aggressive Expansion,No Dividend,Mixed,Deleveraging,Low
+JSWENERGY,JSW Energy Ltd,72,Good,131.49,Aggressive Expansion,Low Dividend,Expansion Using External Funding,Increasing Debt,High
+JSWSTEEL,JSW Steel Ltd,87,Excellent,119.78,Aggressive Expansion,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,High
+KOTAKBANK,"Kotak Mahindra Bank Ltd
+",65,Average,56.86,Balanced,Low Dividend,Expansion Using External Funding,Increasing Debt,Very High
+LICI,Life Insurance Corporation of India,100,Excellent,96.73,Growth Focused,Low Dividend,Healthy Capital Allocation,Stable Debt,Low
+LODHA,Macrotech Developers Ltd,100,Excellent,117.32,Aggressive Expansion,Unknown,Expansion Using External Funding,Deleveraging,Low
+LT,Larsen & Toubro Ltd,100,Excellent,11.93,Low Reinvestment,Moderate Dividend,Asset Monetization,Increasing Debt,Low
+LTIM,LTIMindtree Ltd,100,Excellent,69.1,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+M&M,"Mahindra & Mahindra Ltd
+",73,Good,99.73,Growth Focused,Moderate Dividend,Financial Stress,Increasing Debt,High
+MARUTI,Maruti Suzuki India Ltd,100,Excellent,70.62,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+MOTHERSON,Samvardhana Motherson International Ltd,100,Excellent,87.78,Growth Focused,Moderate Dividend,Expansion Using External Funding,Increasing Debt,Moderate
+NAUKRI,Info Edge (India) Ltd,100,Excellent,121.37,Aggressive Expansion,Moderate Dividend,Expansion Using External Funding,Increasing Debt,Low
+NESTLEIND,Nestle India Ltd,100,Excellent,29.63,Balanced,High Dividend,Healthy Capital Allocation,Increasing Debt,Low
+NHPC,"NHPC Ltd
+",100,Excellent,86.02,Growth Focused,High Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+NTPC,NTPC Ltd,93,Excellent,78.81,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,High
+ONGC,Oil & Natural Gas Corpn Ltd,100,Excellent,57.63,Balanced,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+PFC,Power Finance Corporation Ltd,50,Weak,3.48,Low Reinvestment,Moderate Dividend,Financial Stress,Increasing Debt,Very High
+PIDILITIND,Pidilite Industries Ltd,100,Excellent,64.94,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+PNB,Punjab National Bank,58,Average,5.39,Low Reinvestment,Low Dividend,Financial Stress,Stable Debt,Very High
+POWERGRID,Power Grid Corporation of India Ltd,100,Excellent,35.17,Balanced,High Dividend,Healthy Capital Allocation,Stable Debt,High
+RECLTD,REC Ltd,50,Weak,3.17,Low Reinvestment,Moderate Dividend,Financial Stress,Increasing Debt,Very High
+RELIANCE,"Reliance Industries Ltd
+",100,Excellent,71.53,Growth Focused,Low Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+SBILIFE,SBI Life Insurance Company Ltd,100,Excellent,107.21,Aggressive Expansion,Low Dividend,Healthy Capital Allocation,Stable Debt,Low
+SBIN,State Bank of India,38,Weak,16.07,Low Reinvestment,Low Dividend,Healthy Capital Allocation,Unknown,Unknown
+SHREECEM,Shree Cement Ltd,100,Excellent,42.37,Balanced,Low Dividend,Healthy Capital Allocation,Deleveraging,Low
+SHRIRAMFIN,"Shriram Finance Ltd
+",50,Weak,0.83,Low Reinvestment,Moderate Dividend,Financial Stress,Increasing Debt,Very High
+SIEMENS,Siemens Ltd,100,Excellent,30.06,Balanced,Low Dividend,Healthy Capital Allocation,Increasing Debt,Low
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,100,Excellent,6.29,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Deleveraging,Low
+TATACONSUM,Tata Consumer Products Ltd,100,Excellent,98.66,Growth Focused,High Dividend,Expansion Using External Funding,Increasing Debt,Low
+TATAMOTORS,Tata Motors Ltd,100,Excellent,33.54,Balanced,Low Dividend,Healthy Capital Allocation,Deleveraging,High
+TATAPOWER,"Tata Power Company Ltd
+",86,Excellent,71.67,Growth Focused,Low Dividend,Healthy Capital Allocation,Increasing Debt,High
+TATASTEEL,"Tata Steel Ltd
+",100,Excellent,70.21,Growth Focused,Low Dividend,Healthy Capital Allocation,Increasing Debt,Moderate
+TCS,Tata Consultancy Services Ltd,35,Weak,13.74,Low Reinvestment,Unknown,Asset Monetization,Increasing Debt,Unknown
+TECHM,Tech Mahindra Ltd,100,Excellent,20.67,Low Reinvestment,High Dividend,Healthy Capital Allocation,Stable Debt,Low
+TITAN,"Titan Company Ltd
+",85,Excellent,11.15,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,High
+TORNTPHARM,Torrent Pharmaceuticals Ltd,100,Excellent,4.9,Low Reinvestment,High Dividend,Healthy Capital Allocation,Deleveraging,Moderate
+TRENT,Trent Ltd,100,Excellent,37.66,Balanced,Low Dividend,Healthy Capital Allocation,Deleveraging,Low
+TVSMOTOR,TVS Motor Company Ltd,58,Average,79.89,Growth Focused,Moderate Dividend,Financial Stress,Increasing Debt,Very High
+ULTRACEMCO,,100,Excellent,80.65,Growth Focused,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Low
+UNIONBANK,,70,Good,6.99,Low Reinvestment,Moderate Dividend,Healthy Capital Allocation,Increasing Debt,Very High
+UNITDSPR,,35,Weak,20.21,Low Reinvestment,Moderate Dividend,Asset Monetization,Unknown,Unknown
+VBL,,32,Weak,137.52,Aggressive Expansion,Low Dividend,Expansion Using External Funding,Unknown,Unknown
+VEDL,,52,Weak,38.36,Balanced,High Dividend,Healthy Capital Allocation,Unknown,Unknown
+WIPRO,,28,Weak,6.49,Low Reinvestment,Low Dividend,Asset Monetization,Unknown,Unknown
+ZOMATO,,40,Weak,53.87,Balanced,No Dividend,Healthy Capital Allocation,Unknown,Unknown
+ZYDUSLIFE,,48,Weak,46.22,Balanced,Low Dividend,Healthy Capital Allocation,Unknown,Unknown
