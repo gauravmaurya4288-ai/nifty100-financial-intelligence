@@ -703,6 +703,8 @@ def generate_cashflow_intelligence():
     return intelligence_df
 
 
+
+
 # ==========================================================
 # MAIN
 # ==========================================================
@@ -710,3 +712,4 @@ def generate_cashflow_intelligence():
 if __name__ == "__main__":
 
     generate_cashflow_intelligence()
+
