@@ -4,7 +4,9 @@ import pandas as pd
 import plotly.express as px
 
 from utils.db import get_annual_reports
+from components.styles import load_css
 
+load_css()
 
 # ==========================================================
 # HELPER

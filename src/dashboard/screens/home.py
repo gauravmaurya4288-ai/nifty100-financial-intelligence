@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from components.header import render_header
+from components.styles import load_css
+from components.footer import render_footer
+
+
+load_css()
 
 from utils.db import (
     get_companies,
@@ -27,9 +33,10 @@ def safe_metric(value, suffix=""):
 
 def render():
 
-    st.title("🏠 Nifty100 Dashboard")
-
-    st.markdown("## Financial Intelligence Overview")
+    render_header(
+    "Nifty100 Financial Intelligence",
+    "Professional analytics platform for Indian equity research"
+    )
 
     with st.spinner("Loading dashboard..."):
 
@@ -304,3 +311,6 @@ def render():
     else:
 
         st.info("Sector data unavailable.")
+
+
+render_footer()

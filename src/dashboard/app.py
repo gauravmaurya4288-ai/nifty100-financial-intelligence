@@ -89,36 +89,64 @@ except Exception as e:
 # SIDEBAR
 # ==========================================================
 
-st.sidebar.image(
-    "https://img.icons8.com/color/96/stocks-growth.png",
-    width=70,
+
+st.sidebar.markdown(
+    """
+    <div style="text-align:center;padding:20px 10px;">
+        <h2 style="color:#60A5FA;margin-bottom:5px;">
+            📊 Nifty100 Financial Intelligence Platform
+        </h2>
+
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
-st.sidebar.title("Nifty100")
-
-st.sidebar.caption("Financial Intelligence Dashboard")
+st.sidebar.divider()
 
 page = st.sidebar.radio(
-    "Navigation",
+    "",
     [
         "🏠 Home",
         "🏢 Company Profile",
-        "🔍 Screener",
-        "🤝 Peer Comparison",
         "📈 Trend Analysis",
+        "🔍 Stock Screener",
         "🏭 Sector Analysis",
+        "🤝 Peer Comparison",
         "💰 Capital Allocation",
-        "📄 Annual Reports",
         "🏆 Rankings",
-        "💼 Portfolio Simulator",
+        "💼 Portfolio",
+        "📄 Reports",
     ],
 )
 
 st.sidebar.divider()
 
-st.sidebar.success("Sprint 4")
+st.sidebar.markdown("### 📊 Database")
 
-st.sidebar.info("Version 2.0")
+c1, c2 = st.sidebar.columns(2)
+
+with c1:
+    st.metric("Companies", "92")
+
+with c2:
+    st.metric("Coverage", "N100")
+
+st.sidebar.metric("Version", "2.0")
+
+st.sidebar.divider()
+
+st.sidebar.success("🟢 Database Connected")
+
+st.sidebar.caption(
+    """
+Developed by
+
+**Gaurav Maurya**
+
+© 2026
+"""
+)
 
 # ==========================================================
 # PAGE REGISTRY
@@ -130,7 +158,7 @@ PAGES = {
 
     "🏢 Company Profile": profile,
 
-    "🔍 Screener": screener,
+    "🔍 Stock Screener": screener,
 
     "🤝 Peer Comparison": peers,
 
@@ -140,11 +168,11 @@ PAGES = {
 
     "💰 Capital Allocation": capital,
 
-    "📄 Annual Reports": reports,
+    "📄 Reports": reports,
 
     "🏆 Rankings": rankings,
 
-    "💼 Portfolio Simulator": portfolio,
+    "💼 Portfolio": portfolio,
 
 }
 

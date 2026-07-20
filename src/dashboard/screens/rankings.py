@@ -12,6 +12,9 @@ from src.analytics.ranking import (
     recommendation_distribution,
 )
 
+from components.styles import load_css
+
+load_css()
 
 def render():
     """Render the Rankings Dashboard."""

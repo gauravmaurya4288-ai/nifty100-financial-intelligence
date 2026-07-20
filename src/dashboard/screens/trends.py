@@ -9,6 +9,13 @@ from utils.db import (
     get_company_history
 )
 
+from components.footer import render_footer
+
+
+from components.header import render_header
+from components.styles import load_css
+
+load_css()
 # ==========================================================
 # HELPERS
 # ==========================================================
@@ -992,3 +999,6 @@ def render():
         "📈 Nifty100 Financial Intelligence Dashboard • Trend Analysis"
 
     )
+
+
+render_footer()

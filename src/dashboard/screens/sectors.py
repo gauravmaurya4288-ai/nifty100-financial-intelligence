@@ -4,7 +4,9 @@ import streamlit as st
 import plotly.express as px
 
 from utils.db import get_sector_analysis
+from components.styles import load_css
 
+load_css()
 
 # ==========================================
 # Helper

@@ -4,7 +4,15 @@ import pandas as pd
 import plotly.express as px
 
 from utils.db import get_capital_allocation
+from components.cards import kpi_card
 
+from components.header import render_header
+from components.styles import load_css
+from components.footer import render_footer
+
+
+
+load_css()
 
 # ==========================================================
 # HELPER FUNCTIONS
@@ -1105,3 +1113,5 @@ def render():
     st.caption(
         "💰 Nifty100 Financial Intelligence Dashboard • Capital Allocation Analysis"
     )
+
+render_footer()
