@@ -1,111 +1,111 @@
 company_id,company_name,cluster_id,cluster_name,distance_from_centroid
-ABB,Abbott India Ltd,0,Cluster 0,0.29196586583913314
-ABB,Abbott India Ltd,0,Cluster 0,0.29401542388348606
-ADANIENSOL,Adani Energy Solutions Ltd,3,Cluster 3,1.2874716075325405
-ADANIENT,Adani Enterprises Ltd,0,Cluster 0,1.3017413394856283
-ADANIGREEN,Adani Green Energy Ltd,3,Cluster 3,2.4284831564831073
+ABB,Abbott India Ltd,0,Stable Performers,0.29196586583913314
+ABB,Abbott India Ltd,0,Stable Performers,0.29401542388348606
+ADANIENSOL,Adani Energy Solutions Ltd,3,Leveraged Growth,1.2874716075325405
+ADANIENT,Adani Enterprises Ltd,0,Stable Performers,1.3017413394856283
+ADANIGREEN,Adani Green Energy Ltd,3,Leveraged Growth,2.4284831564831073
 ADANIPORTS,"Adani Ports & Special Economic Zone Ltd
-",1,Cluster 1,1.1783896383280412
-ADANIPOWER,Adani Power Ltd,0,Cluster 0,1.0267399840779554
-AMBUJACEM,Ambuja Cements Ltd,0,Cluster 0,0.9190481010308511
+",1,High Profit Leaders,1.1783896383280412
+ADANIPOWER,Adani Power Ltd,0,Stable Performers,1.0267399840779554
+AMBUJACEM,Ambuja Cements Ltd,0,Stable Performers,0.9190481010308511
 APOLLOHOSP,"Apollo Hospitals
-Chain of Indian private hospitals",0,Cluster 0,0.6627416683744881
+Chain of Indian private hospitals",0,Stable Performers,0.6627416683744881
 ASIANPAINT,"Asian Paints
-Indian Multi-National Paint and Coating Manufacturing Company",0,Cluster 0,0.4244933904153325
-AXISBANK,Axis Bank Ltd,3,Cluster 3,1.8118998138309972
-BAJAJ-AUTO,Bajaj Auto Ltd,0,Cluster 0,0.33998060320330453
-BAJAJ-AUTO,Bajaj Auto Ltd,0,Cluster 0,0.33998060320330453
-BAJAJFINSV,Bajaj Finserv Ltd,3,Cluster 3,0.862765408936783
-BAJAJHLDNG,Bajaj Holdings & Investment Ltd,1,Cluster 1,2.4737106301865075
-BAJFINANCE,Bajaj Finance Ltd,3,Cluster 3,1.1890558111584413
-BANKBARODA,Bank of Baroda,3,Cluster 3,2.172719000466287
-BEL,Bharat Electronics Ltd,2,Cluster 2,0.7863287165158208
-BHARTIARTL,Bharti Airtel Ltd,1,Cluster 1,1.2834935207733051
+Indian Multi-National Paint and Coating Manufacturing Company",0,Stable Performers,0.4244933904153325
+AXISBANK,Axis Bank Ltd,3,Leveraged Growth,1.8118998138309972
+BAJAJ-AUTO,Bajaj Auto Ltd,0,Stable Performers,0.33998060320330453
+BAJAJ-AUTO,Bajaj Auto Ltd,0,Stable Performers,0.33998060320330453
+BAJAJFINSV,Bajaj Finserv Ltd,3,Leveraged Growth,0.862765408936783
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,1,High Profit Leaders,2.4737106301865075
+BAJFINANCE,Bajaj Finance Ltd,3,Leveraged Growth,1.1890558111584413
+BANKBARODA,Bank of Baroda,3,Leveraged Growth,2.172719000466287
+BEL,Bharat Electronics Ltd,2,Financial Outliers,0.7863287165158208
+BHARTIARTL,Bharti Airtel Ltd,1,High Profit Leaders,1.2834935207733051
 BHEL,"Bharat Heavy Electricals Limited
-",0,Cluster 0,2.151497587806232
-BOSCHLTD,Bosch Ltd,0,Cluster 0,0.5817469878866489
-BPCL,Bharat Petroleum Corporation Ltd,0,Cluster 0,0.43015366668456184
-BRITANNIA,Britannia Industries Ltd,0,Cluster 0,0.2206782439301812
-CANBK,Canara Bank,3,Cluster 3,3.500454172788878
-CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,3,Cluster 3,0.5774345991675266
+",0,Stable Performers,2.151497587806232
+BOSCHLTD,Bosch Ltd,0,Stable Performers,0.5817469878866489
+BPCL,Bharat Petroleum Corporation Ltd,0,Stable Performers,0.43015366668456184
+BRITANNIA,Britannia Industries Ltd,0,Stable Performers,0.2206782439301812
+CANBK,Canara Bank,3,Leveraged Growth,3.500454172788878
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,3,Leveraged Growth,0.5774345991675266
 CIPLA,"Cipla Ltd
-",1,Cluster 1,0.7293942391008242
-COALINDIA,Coal India Ltd,1,Cluster 1,1.1138469177292931
-DABUR,Dabur India Ltd,0,Cluster 0,0.37100967856392714
-DIVISLAB,Divis Laboratories Ltd,0,Cluster 0,0.3923155115192077
-DLF,DLF Ltd,0,Cluster 0,2.1904734986013232
-DMART,Avenue Supermarts Ltd,0,Cluster 0,1.483815270537868
-DRREDDY,Dr Reddys Laboratories Ltd,0,Cluster 0,0.5014914441420635
-EICHERMOT,Eicher Motors Ltd,0,Cluster 0,0.33880242317600595
-GAIL,GAIL (India) Ltd,0,Cluster 0,0.40881656024154467
-GODREJCP,Godrej Consumer Products Ltd,0,Cluster 0,0.5396829899197577
-GRASIM,Grasim Industries Ltd,0,Cluster 0,0.37329679225850004
-HAL,Hindustan Aeronautics Ltd,2,Cluster 2,0.7863287165158217
-HAVELLS,Havells India Ltd,0,Cluster 0,0.5498922799474273
-HCLTECH,HCL Technologies Ltd,0,Cluster 0,0.3951675403599712
-HDFCBANK,HDFC Bank Ltd,4,Cluster 4,1.3795634425168202
-HDFCLIFE,HDFC Life Insurance Company Ltd,1,Cluster 1,1.2813356260930504
+",1,High Profit Leaders,0.7293942391008242
+COALINDIA,Coal India Ltd,1,High Profit Leaders,1.1138469177292931
+DABUR,Dabur India Ltd,0,Stable Performers,0.37100967856392714
+DIVISLAB,Divis Laboratories Ltd,0,Stable Performers,0.3923155115192077
+DLF,DLF Ltd,0,Stable Performers,2.1904734986013232
+DMART,Avenue Supermarts Ltd,0,Stable Performers,1.483815270537868
+DRREDDY,Dr Reddys Laboratories Ltd,0,Stable Performers,0.5014914441420635
+EICHERMOT,Eicher Motors Ltd,0,Stable Performers,0.33880242317600595
+GAIL,GAIL (India) Ltd,0,Stable Performers,0.40881656024154467
+GODREJCP,Godrej Consumer Products Ltd,0,Stable Performers,0.5396829899197577
+GRASIM,Grasim Industries Ltd,0,Stable Performers,0.37329679225850004
+HAL,Hindustan Aeronautics Ltd,2,Financial Outliers,0.7863287165158217
+HAVELLS,Havells India Ltd,0,Stable Performers,0.5498922799474273
+HCLTECH,HCL Technologies Ltd,0,Stable Performers,0.3951675403599712
+HDFCBANK,HDFC Bank Ltd,4,Cash Rich Leaders,1.3795634425168202
+HDFCLIFE,HDFC Life Insurance Company Ltd,1,High Profit Leaders,1.2813356260930504
 HEROMOTOCO,"Hero MotoCorp Ltd
-",1,Cluster 1,1.6693824464524398
-HINDALCO,Hindalco Industries Ltd,1,Cluster 1,0.5593531968917724
+",1,High Profit Leaders,1.6693824464524398
+HINDALCO,Hindalco Industries Ltd,1,High Profit Leaders,0.5593531968917724
 HINDUNILVR,"Hindustan Unilever Ltd
-",1,Cluster 1,0.7216950892274647
-ICICIBANK,ICICI Bank Ltd,4,Cluster 4,0.7813538299511814
-ICICIGI,ICICI Lombard General Insurance Company Ltd,1,Cluster 1,0.3966243054771782
-ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,1,Cluster 1,0.8763932445915577
-INDIGO,Interglobe Aviation Ltd,1,Cluster 1,1.5381628379581331
-INDUSINDBK,IndusInd Bank Ltd,3,Cluster 3,2.688455503408561
-INFY,Infosys Ltd,0,Cluster 0,0.5806793934128797
+",1,High Profit Leaders,0.7216950892274647
+ICICIBANK,ICICI Bank Ltd,4,Cash Rich Leaders,0.7813538299511814
+ICICIGI,ICICI Lombard General Insurance Company Ltd,1,High Profit Leaders,0.3966243054771782
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,1,High Profit Leaders,0.8763932445915577
+INDIGO,Interglobe Aviation Ltd,1,High Profit Leaders,1.5381628379581331
+INDUSINDBK,IndusInd Bank Ltd,3,Leveraged Growth,2.688455503408561
+INFY,Infosys Ltd,0,Stable Performers,0.5806793934128797
 IOC,"Indian Oil Corporation
-",0,Cluster 0,0.4706171123233304
-IRCTC,Indian Railway Catering & Tourism Corporation Ltd,0,Cluster 0,1.2160289802308852
-IRFC,Indian Railway Finance Corporation Ltd,3,Cluster 3,2.3617795312515364
+",0,Stable Performers,0.4706171123233304
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,0,Stable Performers,1.2160289802308852
+IRFC,Indian Railway Finance Corporation Ltd,3,Leveraged Growth,2.3617795312515364
 ITC,"ITC Ltd
-",0,Cluster 0,0.7530910352454477
-JINDALSTEL,Jindal Steel & Power Ltd,0,Cluster 0,1.2334218133848815
-JIOFIN,Jio Financial Services Ltd,1,Cluster 1,0.5659758335874651
-JSWENERGY,JSW Energy Ltd,0,Cluster 0,1.3190580682325663
-JSWSTEEL,JSW Steel Ltd,0,Cluster 0,1.3415617430498525
+",0,Stable Performers,0.7530910352454477
+JINDALSTEL,Jindal Steel & Power Ltd,0,Stable Performers,1.2334218133848815
+JIOFIN,Jio Financial Services Ltd,1,High Profit Leaders,0.5659758335874651
+JSWENERGY,JSW Energy Ltd,0,Stable Performers,1.3190580682325663
+JSWSTEEL,JSW Steel Ltd,0,Stable Performers,1.3415617430498525
 KOTAKBANK,"Kotak Mahindra Bank Ltd
-",4,Cluster 4,1.2724687969202693
-LICI,Life Insurance Corporation of India,0,Cluster 0,0.8645102382583519
-LODHA,Macrotech Developers Ltd,0,Cluster 0,1.8192365653500122
-LT,Larsen & Toubro Ltd,0,Cluster 0,0.7995453034375982
-LTIM,LTIMindtree Ltd,3,Cluster 3,2.616044195885226
+",4,Cash Rich Leaders,1.2724687969202693
+LICI,Life Insurance Corporation of India,0,Stable Performers,0.8645102382583519
+LODHA,Macrotech Developers Ltd,0,Stable Performers,1.8192365653500122
+LT,Larsen & Toubro Ltd,0,Stable Performers,0.7995453034375982
+LTIM,LTIMindtree Ltd,3,Leveraged Growth,2.616044195885226
 M&M,"Mahindra & Mahindra Ltd
-",0,Cluster 0,0.7254350333039848
-MARUTI,Maruti Suzuki India Ltd,0,Cluster 0,0.3184942657222928
-MOTHERSON,Samvardhana Motherson International Ltd,0,Cluster 0,0.4857917419190378
-NAUKRI,Info Edge (India) Ltd,0,Cluster 0,1.0225563038387708
-NESTLEIND,Nestle India Ltd,0,Cluster 0,0.660101148389301
+",0,Stable Performers,0.7254350333039848
+MARUTI,Maruti Suzuki India Ltd,0,Stable Performers,0.3184942657222928
+MOTHERSON,Samvardhana Motherson International Ltd,0,Stable Performers,0.4857917419190378
+NAUKRI,Info Edge (India) Ltd,0,Stable Performers,1.0225563038387708
+NESTLEIND,Nestle India Ltd,0,Stable Performers,0.660101148389301
 NHPC,"NHPC Ltd
-",0,Cluster 0,1.664426951371018
-NTPC,NTPC Ltd,0,Cluster 0,0.5498153458946891
-ONGC,Oil & Natural Gas Corpn Ltd,0,Cluster 0,0.7131435845920099
-PFC,Power Finance Corporation Ltd,3,Cluster 3,1.647508733462508
-PIDILITIND,Pidilite Industries Ltd,0,Cluster 0,0.3018545488080562
-PNB,Punjab National Bank,3,Cluster 3,3.632604073627836
-POWERGRID,Power Grid Corporation of India Ltd,1,Cluster 1,1.2207185347104559
-RECLTD,REC Ltd,1,Cluster 1,2.0943992495340056
+",0,Stable Performers,1.664426951371018
+NTPC,NTPC Ltd,0,Stable Performers,0.5498153458946891
+ONGC,Oil & Natural Gas Corpn Ltd,0,Stable Performers,0.7131435845920099
+PFC,Power Finance Corporation Ltd,3,Leveraged Growth,1.647508733462508
+PIDILITIND,Pidilite Industries Ltd,0,Stable Performers,0.3018545488080562
+PNB,Punjab National Bank,3,Leveraged Growth,3.632604073627836
+POWERGRID,Power Grid Corporation of India Ltd,1,High Profit Leaders,1.2207185347104559
+RECLTD,REC Ltd,1,High Profit Leaders,2.0943992495340056
 RELIANCE,"Reliance Industries Ltd
-",4,Cluster 4,2.1406334479627716
-SBILIFE,SBI Life Insurance Company Ltd,0,Cluster 0,2.0963506986439047
-SBIN,State Bank of India,0,Cluster 0,2.158926966796713
-SHREECEM,Shree Cement Ltd,0,Cluster 0,0.20085047845313178
+",4,Cash Rich Leaders,2.1406334479627716
+SBILIFE,SBI Life Insurance Company Ltd,0,Stable Performers,2.0963506986439047
+SBIN,State Bank of India,0,Stable Performers,2.158926966796713
+SHREECEM,Shree Cement Ltd,0,Stable Performers,0.20085047845313178
 SHRIRAMFIN,"Shriram Finance Ltd
-",3,Cluster 3,0.9729196333101103
-SIEMENS,Siemens Ltd,0,Cluster 0,0.3107313884327457
-SUNPHARMA,Sun Pharmaceuticals Industries Ltd,0,Cluster 0,0.7198376044926064
-TATACONSUM,Tata Consumer Products Ltd,0,Cluster 0,0.8141576768781503
-TATAMOTORS,Tata Motors Ltd,0,Cluster 0,1.226272436025029
+",3,Leveraged Growth,0.9729196333101103
+SIEMENS,Siemens Ltd,0,Stable Performers,0.3107313884327457
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,0,Stable Performers,0.7198376044926064
+TATACONSUM,Tata Consumer Products Ltd,0,Stable Performers,0.8141576768781503
+TATAMOTORS,Tata Motors Ltd,0,Stable Performers,1.226272436025029
 TATAPOWER,"Tata Power Company Ltd
-",0,Cluster 0,0.8422251212668398
+",0,Stable Performers,0.8422251212668398
 TATASTEEL,"Tata Steel Ltd
-",0,Cluster 0,0.91487500886621
-TCS,Tata Consultancy Services Ltd,0,Cluster 0,0.40221295461420326
-TECHM,Tech Mahindra Ltd,0,Cluster 0,0.4954856390025697
+",0,Stable Performers,0.91487500886621
+TCS,Tata Consultancy Services Ltd,0,Stable Performers,0.40221295461420326
+TECHM,Tech Mahindra Ltd,0,Stable Performers,0.4954856390025697
 TITAN,"Titan Company Ltd
-",0,Cluster 0,1.554277004823528
-TORNTPHARM,Torrent Pharmaceuticals Ltd,0,Cluster 0,0.6382600049337654
-TRENT,Trent Ltd,3,Cluster 3,3.0511490290115133
-TVSMOTOR,TVS Motor Company Ltd,0,Cluster 0,1.2872241728848186
+",0,Stable Performers,1.554277004823528
+TORNTPHARM,Torrent Pharmaceuticals Ltd,0,Stable Performers,0.6382600049337654
+TRENT,Trent Ltd,3,Leveraged Growth,3.0511490290115133
+TVSMOTOR,TVS Motor Company Ltd,0,Stable Performers,1.2872241728848186

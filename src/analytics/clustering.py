@@ -122,12 +122,12 @@ def compute_distance(model, X):
 def save_clusters(df, labels, distances):
 
     names = {
-        0: "Cluster 0",
-        1: "Cluster 1",
-        2: "Cluster 2",
-        3: "Cluster 3",
-        4: "Cluster 4",
-    }
+    0: "Stable Performers",
+    1: "High Profit Leaders",
+    2: "Financial Outliers",
+    3: "Leveraged Growth",
+    4: "Cash Rich Leaders",
+}
 
     output = pd.DataFrame({
         "company_id": df["company_id"],

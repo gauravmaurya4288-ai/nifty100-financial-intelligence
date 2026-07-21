@@ -1,0 +1,6 @@
+cluster_id,cluster_name,companies,return_on_equity_pct,debt_to_equity,revenue_cagr_5yr,net_cash_flow,operating_profit_margin_pct,investment_profile
+0,Stable Performers,57,22.37,0.57,10.24,243.0,19.29,Balanced companies with steady profitability and low leverage.
+1,High Profit Leaders,15,74.46,0.82,14.0,-384.0,82.17,Companies with outstanding profitability and strong operational efficiency.
+2,Financial Outliers,2,4280.32,0.56,9.73,-1462.0,28.51,Companies showing extreme financial metrics that require detailed analysis.
+3,Leveraged Growth,15,21.46,6.15,21.15,-1866.0,39.99,High-growth companies financed with significant debt.
+4,Cash Rich Leaders,4,14.08,4.46,15.58,27210.25,56.39,Cash-rich mature companies generating strong operating cash flows.
