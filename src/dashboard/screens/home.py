@@ -4,6 +4,13 @@ import plotly.express as px
 from components.header import render_header
 from components.styles import load_css
 from components.footer import render_footer
+from components.loader import loading
+
+
+
+    
+
+        
 
 
 load_css()
@@ -32,13 +39,13 @@ def safe_metric(value, suffix=""):
 # ==========================================================
 
 def render():
-
+    
     render_header(
     "Nifty100 Financial Intelligence",
     "Professional analytics platform for Indian equity research"
     )
 
-    with st.spinner("Loading dashboard..."):
+    with loading("Loading Dashboard..."):
 
         companies = get_companies()
         ratios = get_ratios()
