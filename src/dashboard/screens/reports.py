@@ -6,7 +6,7 @@ import plotly.express as px
 from utils.db import get_annual_reports
 from components.styles import load_css
 
-load_css()
+
 
 # ==========================================================
 # HELPER
@@ -25,6 +25,8 @@ def safe_metric(value):
 # ==========================================================
 
 def render():
+
+    load_css()
 
     start = time.time()
 

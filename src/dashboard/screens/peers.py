@@ -16,7 +16,7 @@ from components.footer import render_footer
 
 from components.styles import load_css
 
-load_css()
+
 
 # ==========================================================
 # HELPER
@@ -38,6 +38,8 @@ def safe_metric(value, suffix="", decimals=2):
 # ==========================================================
 
 def render():
+
+    load_css()
 
     start = time.time()
 

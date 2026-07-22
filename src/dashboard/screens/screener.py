@@ -10,7 +10,7 @@ from components.footer import render_footer
 from components.header import render_header
 from components.styles import load_css
 
-load_css()
+
 
 # ==========================================================
 # HELPERS
@@ -31,6 +31,8 @@ def safe_metric(value, suffix="", decimals=2):
 # ==========================================================
 
 def render():
+
+    load_css()
 
     start = time.time()
 
@@ -1012,4 +1014,4 @@ def render():
         "📈 Nifty100 Financial Intelligence Dashboard • Advanced Stock Screener"
     )
     
-render_footer()
+    render_footer()

@@ -10,9 +10,11 @@ from components.footer import render_footer
 
 from components.styles import load_css
 
-load_css()
 
 def render():
+
+    load_css()
+
     """Portfolio Simulator"""
 
     st.title("💼 Portfolio Simulator")

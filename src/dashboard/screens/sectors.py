@@ -6,7 +6,7 @@ import plotly.express as px
 from utils.db import get_sector_analysis
 from components.styles import load_css
 
-load_css()
+
 
 # ==========================================
 # Helper
@@ -25,6 +25,8 @@ def safe(value, suffix=""):
 # ==========================================
 
 def render():
+
+    load_css()
 
     start = time.time()
 
@@ -799,3 +801,5 @@ def render():
     st.caption(
         "📊 Nifty100 Financial Intelligence Dashboard • Sector Analysis"
     )
+
+    

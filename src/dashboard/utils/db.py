@@ -521,6 +521,27 @@ def get_annual_reports():
     conn.close()
 
     return df
+
+@st.cache_data
+def load_company_details():
+
+    conn = sqlite3.connect(DB_PATH)
+
+    query = """
+    SELECT
+        c.company_id,
+        c.company_name,
+        s.broad_sector
+    FROM companies c
+    LEFT JOIN sectors s
+        ON c.company_id = s.company_id
+    """
+
+    companies = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return companies
 # ==========================================================
 # Test
 # ==========================================================

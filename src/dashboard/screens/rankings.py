@@ -14,9 +14,12 @@ from src.analytics.ranking import (
 
 from components.styles import load_css
 
-load_css()
+
 
 def render():
+
+    load_css()
+
     """Render the Rankings Dashboard."""
 
     st.title("🏆 Company Rankings")

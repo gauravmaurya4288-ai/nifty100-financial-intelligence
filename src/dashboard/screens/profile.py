@@ -41,6 +41,8 @@ def safe_value(value, suffix="", decimals=2):
 
 def render():
 
+    load_css()
+
     start_time = time.time()
 
     st.title("🏢 Company Profile")
