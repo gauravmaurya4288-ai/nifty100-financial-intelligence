@@ -798,8 +798,5 @@ def render():
     # FOOTER
     # ==========================================
 
-    st.caption(
-        "📊 Nifty100 Financial Intelligence Dashboard • Sector Analysis"
-    )
-
+    
     
