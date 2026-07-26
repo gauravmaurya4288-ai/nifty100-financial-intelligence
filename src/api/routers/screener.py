@@ -2,8 +2,9 @@
 Stock Screener API
 """
 
-from fastapi import APIRouter, Query
 from typing import Optional
+
+from fastapi import APIRouter, Query
 
 from ..database import execute_query
 
@@ -15,7 +16,11 @@ def screener(
     sector: Optional[str] = Query(None),
     market_cap_min: Optional[float] = Query(None),
     market_cap_max: Optional[float] = Query(None),
+
+    # Supports both parameter names
+    min_roe: Optional[float] = Query(None),
     roe_min: Optional[float] = Query(None),
+
     roce_min: Optional[float] = Query(None),
     pe_max: Optional[float] = Query(None),
     pb_max: Optional[float] = Query(None),
@@ -23,6 +28,10 @@ def screener(
     revenue_cagr_5yr_min: Optional[float] = Query(None),
     quality_score_min: Optional[float] = Query(None),
 ):
+    """
+    Stock screener with optional filters.
+    """
+
     sql = """
     WITH latest_ratios AS (
         SELECT *
@@ -56,7 +65,7 @@ def screener(
     LEFT JOIN latest_ratios lr
         ON c.company_id = lr.company_id
 
-    WHERE 1=1
+    WHERE 1 = 1
     """
 
     params = []
@@ -73,9 +82,14 @@ def screener(
         sql += " AND lr.market_cap_crore <= ?"
         params.append(market_cap_max)
 
-    if roe_min is not None:
+    # Support both ?min_roe= and ?roe_min=
+    effective_roe = (
+        min_roe if min_roe is not None else roe_min
+    )
+
+    if effective_roe is not None:
         sql += " AND lr.return_on_equity_pct >= ?"
-        params.append(roe_min)
+        params.append(effective_roe)
 
     if roce_min is not None:
         sql += " AND lr.return_on_capital_employed_pct >= ?"
@@ -112,9 +126,14 @@ def screener(
 
 @router.get("/available-sectors")
 def available_sectors():
+    """
+    Return all available sectors.
+    """
+
     sql = """
     SELECT DISTINCT broad_sector
     FROM sectors
     ORDER BY broad_sector
     """
+
     return execute_query(sql)

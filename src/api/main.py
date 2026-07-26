@@ -7,6 +7,7 @@ import logging
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from src.api.routers import peers
 
 from .config import (
     API_TITLE,
@@ -24,7 +25,6 @@ from .routers import (
     sectors,
     peers,
     valuation,
-    portfolio,
     documents,
 )
 
@@ -86,31 +86,27 @@ app.include_router(
 
 app.include_router(
     sectors.router,
-    prefix="/api/v1/sectors",
+    prefix="/api/v1",
     tags=["Sectors"],
 )
 
 app.include_router(
     peers.router,
-    prefix="/api/v1/peers",
+    prefix="/api/v1",
     tags=["Peers"],
 )
 
 app.include_router(
     valuation.router,
-    prefix="/api/v1/valuation",
+    prefix="/api/v1",
     tags=["Valuation"],
 )
 
-app.include_router(
-    portfolio.router,
-    prefix="/api/v1/portfolio",
-    tags=["Portfolio"],
-)
+
 
 app.include_router(
     documents.router,
-    prefix="/api/v1/documents",
+    prefix="/api/v1",
     tags=["Documents"],
 )
 
