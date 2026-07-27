@@ -14,6 +14,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+
+
 OUTPUT_DIR = PROJECT_ROOT / "output"
 REPORT_DIR = PROJECT_ROOT / "reports"
 DB_PATH = PROJECT_ROOT / "db" / "nifty100.db"
@@ -310,13 +312,6 @@ st.sidebar.divider()
 
 st.sidebar.subheader("🚀 Platform")
 
-st.sidebar.metric(
-
-    "Version",
-
-    "2.1"
-
-)
 
 st.sidebar.metric(
 
@@ -334,13 +329,7 @@ st.sidebar.metric(
 
 )
 
-st.sidebar.metric(
 
-    "Reports",
-
-    "3 Generated"
-
-)
 
 
 # ==========================================================
@@ -383,8 +372,6 @@ st.sidebar.markdown(
 B.Tech Computer Engineering
 
 Nifty100 Financial Intelligence
-
-Version **2.1**
 
 © 2026
 """
