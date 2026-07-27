@@ -8,11 +8,11 @@ from components.cards import kpi_card
 
 from components.header import render_header
 from components.styles import load_css
-from components.footer import render_footer
 
 
 
-load_css()
+
+
 
 # ==========================================================
 # HELPER FUNCTIONS
@@ -34,6 +34,8 @@ def safe_metric(value, suffix="", decimals=2):
 # ==========================================================
 
 def render():
+
+    load_css()
 
     start = time.time()
 
@@ -1114,4 +1116,3 @@ def render():
         "💰 Nifty100 Financial Intelligence Dashboard • Capital Allocation Analysis"
     )
 
-render_footer()

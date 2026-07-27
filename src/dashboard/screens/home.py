@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 from components.styles import load_css
-from components.footer import render_footer
+
 from components.loader import loading
         
 from utils.db import (

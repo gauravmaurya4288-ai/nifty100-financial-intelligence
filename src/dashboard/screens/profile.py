@@ -12,11 +12,6 @@ from utils.db import (
 
 
 from components.header import render_header
-from components.footer import render_footer
-
-from components.footer import render_footer
-
-
 from components.styles import load_css
 
 load_css()
@@ -841,4 +836,3 @@ def render():
         "📈 Nifty100 Financial Intelligence Dashboard • Company Profile Module"
     )
 
-render_footer()

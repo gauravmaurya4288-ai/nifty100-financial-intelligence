@@ -782,3 +782,5 @@ def render():
     render_ai_insights()
 
     render_downloads()
+
+    load_css()

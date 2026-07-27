@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 
 from utils.db import get_screener_data
-from components.footer import render_footer
+
 
 
 from components.header import render_header
@@ -1014,4 +1014,3 @@ def render():
         "📈 Nifty100 Financial Intelligence Dashboard • Advanced Stock Screener"
     )
     
-    render_footer()

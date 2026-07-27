@@ -11,7 +11,7 @@ from utils.db import (
 )
 
 from components.header import render_header
-from components.footer import render_footer
+
 
 
 from components.styles import load_css
@@ -1122,4 +1122,3 @@ def render():
         "🤝 Nifty100 Financial Intelligence Dashboard • Peer Comparison"
     )
 
-render_footer()

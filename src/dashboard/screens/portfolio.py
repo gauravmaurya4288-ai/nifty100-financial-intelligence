@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 from src.analytics.investment_view import generate_investment_report
 
 from components.header import render_header
-from components.footer import render_footer
+
 
 
 from components.styles import load_css
@@ -256,4 +256,3 @@ def render():
         hide_index=True,
     )
 
-render_footer()
