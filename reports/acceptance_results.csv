@@ -1,0 +1,33 @@
+Gate,Status,Details,Timestamp
+AC-01,PASS,Company count = 92,2026-07-28 21:20:51
+AC-02,PASS,"profit_loss: 88 companies
+balance_sheet: 87 companies
+cash_flow: 85 companies",2026-07-28 21:20:51
+AC-03,PASS,No foreign key violations.,2026-07-28 21:20:51
+AC-04,PASS,1071 financial ratio rows.,2026-07-28 21:20:51
+AC-05,MANUAL,Compare the above values with Excel. Maximum difference allowed = 0.1%,2026-07-28 21:20:51
+AC-06,FAIL,"company_id  roe_percentage  return_on_equity_pct  difference
+  ADANIENT           13.64                  8.53        5.11
+ADANIPOWER           57.10                 48.28        8.82
+BAJAJFINSV           11.72                 25.85       14.13
+       BEL           26.30               4744.05     4717.75
+      BPCL           41.90                 35.51        6.39
+ COALINDIA           52.00                 45.17        6.83
+  GODREJCP            6.77                 -4.45       11.22
+       HAL           28.90               3816.58     3787.68
+     IRCTC           40.40                 34.40        6.00
+      LICI           63.61                 49.45       14.16",2026-07-28 21:20:51
+AC-07,PASS,Screener returned 50 companies.,2026-07-28 21:20:52
+AC-08,FAIL,"HTTPConnectionPool(host='localhost', port=8501): Max retries exceeded with url: / (Caused by NewConnectionError(""HTTPConnection(host='localhost', port=8501): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it""))",2026-07-28 21:20:56
+AC-09,PASS,screener_output.xlsx: 50 rows × 15 columns,2026-07-28 21:20:56
+AC-10,PASS,Validated 92 tearsheets.,2026-07-28 21:20:56
+AC-11,PASS,Health API returned HTTP 200,2026-07-28 21:20:58
+AC-12,PASS,12 yearly records returned.,2026-07-28 21:21:00
+AC-13,PASS,"API=92, Output=50 (filtered screener output)",2026-07-28 21:21:02
+AC-14,PASS,11 peer groups using 'peer_group_name'.,2026-07-28 21:21:02
+AC-15,PASS,All 92 companies assigned clusters.,2026-07-28 21:21:02
+AC-16,PASS,All companies have at least one Pro and one Con.,2026-07-28 21:21:02
+AC-17,PASS,All 92 tearsheets verified.,2026-07-28 21:21:02
+AC-18,PASS,pytest_report.html (219.5 KB),2026-07-28 21:21:02
+AC-19,PASS,3 validation failures recorded.,2026-07-28 21:21:02
+AC-20,PASS,analyst_guide.pdf (482.0 KB),2026-07-28 21:21:02
